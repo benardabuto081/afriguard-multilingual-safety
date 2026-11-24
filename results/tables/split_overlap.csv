@@ -1,0 +1,11 @@
+language,pair,id,prompt,response
+amharic,train&dev,0,0,0
+hausa,train&dev,0,0,0
+igbo,train&dev,0,0,0
+oromo,train&dev,0,1,0
+shona,train&dev,0,0,0
+swahili,train&dev,0,0,0
+twi,train&dev,0,0,0
+wolof,train&dev,0,0,0
+yoruba,train&dev,0,0,0
+zulu,train&dev,0,0,0

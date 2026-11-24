@@ -1,0 +1,3100 @@
+{
+  "tasks": [
+    "task_a_safety",
+    "task_b_category"
+  ],
+  "languages": [
+    "amharic",
+    "hausa",
+    "igbo",
+    "oromo",
+    "shona",
+    "swahili",
+    "twi",
+    "wolof",
+    "yoruba",
+    "zulu"
+  ],
+  "binary_task_detected": "task_a_safety",
+  "files": {
+    "task_a_safety/amharic/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#C#": 2
+      },
+      "language_values": {
+        "am": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.9,
+        "median": 16.0,
+        "max": 30
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 66.7,
+        "median": 63.5,
+        "max": 174
+      },
+      "label_distribution": {
+        "unsafe": 60,
+        "safe": 60
+      }
+    },
+    "task_a_safety/amharic/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#C#": 2
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/amharic/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#B#": 11,
+        "AG#": 8,
+        "AG#F#": 7
+      },
+      "language_values": {
+        "am": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.8,
+        "median": 16.0,
+        "max": 39
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 67.5,
+        "median": 64.0,
+        "max": 207
+      },
+      "label_distribution": {
+        "unsafe": 467,
+        "safe": 393
+      }
+    },
+    "task_a_safety/hausa/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#B#": 2,
+        "AG#D#EC#D": 1,
+        "AG#E#D#BB": 1
+      },
+      "language_values": {
+        "ha": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 25.1,
+        "median": 24.0,
+        "max": 49
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 97.9,
+        "median": 89.0,
+        "max": 287
+      },
+      "label_distribution": {
+        "safe": 62,
+        "unsafe": 58
+      }
+    },
+    "task_a_safety/hausa/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#B#": 2,
+        "AG#D#EC#D": 1,
+        "AG#E#D#BB": 1
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/hausa/train": {
+      "rows": 848,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 10,
+        "AG#": 7,
+        "AG#D#F#": 6
+      },
+      "language_values": {
+        "ha": 848
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 25.8,
+        "median": 25.0,
+        "max": 292
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 98.4,
+        "median": 91.0,
+        "max": 241
+      },
+      "label_distribution": {
+        "unsafe": 432,
+        "safe": 416
+      }
+    },
+    "task_a_safety/igbo/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#BF#": 1,
+        "AG#FD#CCC#D": 1
+      },
+      "language_values": {
+        "ig": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 23.8,
+        "median": 22.0,
+        "max": 46
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 93.7,
+        "median": 89.5,
+        "max": 273
+      },
+      "label_distribution": {
+        "unsafe": 60,
+        "safe": 60
+      }
+    },
+    "task_a_safety/igbo/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#BF#": 1,
+        "AG#FD#CCC#D": 1
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/igbo/train": {
+      "rows": 848,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 12,
+        "AG#E#": 9,
+        "AG#": 8
+      },
+      "language_values": {
+        "ig": 848
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 24.1,
+        "median": 23.0,
+        "max": 292
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 92.3,
+        "median": 86.0,
+        "max": 235
+      },
+      "label_distribution": {
+        "unsafe": 429,
+        "safe": 419
+      }
+    },
+    "task_a_safety/oromo/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#": 2
+      },
+      "language_values": {
+        "om": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 17.8,
+        "median": 17.0,
+        "max": 35
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 70.8,
+        "median": 66.5,
+        "max": 202
+      },
+      "label_distribution": {
+        "unsafe": 60,
+        "safe": 60
+      }
+    },
+    "task_a_safety/oromo/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#": 2
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/oromo/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#F#": 5,
+        "AG#F#": 5,
+        "AG#D#D#": 5
+      },
+      "language_values": {
+        "om": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 17.8,
+        "median": 17.0,
+        "max": 42
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 70.0,
+        "median": 65.0,
+        "max": 216
+      },
+      "label_distribution": {
+        "unsafe": 477,
+        "safe": 383
+      }
+    },
+    "task_a_safety/shona/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 2,
+        "AG#DD#": 2,
+        "AG#D#CC#": 1
+      },
+      "language_values": {
+        "sn": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.6,
+        "median": 16.0,
+        "max": 40
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 64.9,
+        "median": 60.0,
+        "max": 151
+      },
+      "label_distribution": {
+        "unsafe": 60,
+        "safe": 60
+      }
+    },
+    "task_a_safety/shona/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 2,
+        "AG#DD#": 2,
+        "AG#D#CC#": 1
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/shona/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 7,
+        "AG#A#": 7,
+        "AG#F#": 6
+      },
+      "language_values": {
+        "sn": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.3,
+        "median": 16.0,
+        "max": 38
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 65.4,
+        "median": 60.0,
+        "max": 186
+      },
+      "label_distribution": {
+        "unsafe": 445,
+        "safe": 415
+      }
+    },
+    "task_a_safety/swahili/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 3,
+        "AGF#EA#": 1,
+        "AGB#DF#C#A#": 1
+      },
+      "language_values": {
+        "sw": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 22.6,
+        "median": 22.0,
+        "max": 50
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 92.9,
+        "median": 84.0,
+        "max": 246
+      },
+      "label_distribution": {
+        "safe": 60,
+        "unsafe": 60
+      }
+    },
+    "task_a_safety/swahili/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 3,
+        "AGF#EA#": 1,
+        "AGB#DF#C#A#": 1
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/swahili/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#F#": 9,
+        "AG#A#": 8,
+        "AG#B#": 7
+      },
+      "language_values": {
+        "sw": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 23.6,
+        "median": 22.0,
+        "max": 50
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 87.2,
+        "median": 79.0,
+        "max": 275
+      },
+      "label_distribution": {
+        "unsafe": 498,
+        "safe": 362
+      }
+    },
+    "task_a_safety/twi/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#D#D#": 2,
+        "AGE#D#": 2,
+        "AG#ED#D#": 1
+      },
+      "language_values": {
+        "tw": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 30.6,
+        "median": 27.0,
+        "max": 280
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 107.4,
+        "median": 100.0,
+        "max": 278
+      },
+      "label_distribution": {
+        "safe": 61,
+        "unsafe": 59
+      }
+    },
+    "task_a_safety/twi/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#D#D#": 2,
+        "AGE#D#": 2,
+        "AG#ED#D#": 1
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/twi/train": {
+      "rows": 880,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 9,
+        "AG#C#": 9,
+        "AG#F#": 6
+      },
+      "language_values": {
+        "tw": 880
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.9,
+        "median": 27.0,
+        "max": 61
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 106.1,
+        "median": 98.0,
+        "max": 340
+      },
+      "label_distribution": {
+        "unsafe": 453,
+        "safe": 427
+      }
+    },
+    "task_a_safety/wolof/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#D#D#": 2,
+        "AGBE#E#BA#": 1
+      },
+      "language_values": {
+        "wo": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 28.6,
+        "median": 27.0,
+        "max": 65
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 99.0,
+        "median": 94.0,
+        "max": 224
+      },
+      "label_distribution": {
+        "safe": 60,
+        "unsafe": 60
+      }
+    },
+    "task_a_safety/wolof/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#D#D#": 2,
+        "AGBE#E#BA#": 1
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/wolof/train": {
+      "rows": 867,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 2,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 10,
+        "AG#D#": 9,
+        "AG#C#": 8
+      },
+      "language_values": {
+        "wo": 867
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.7,
+        "median": 25.0,
+        "max": 263
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 96.4,
+        "median": 91.0,
+        "max": 288
+      },
+      "label_distribution": {
+        "unsafe": 490,
+        "safe": 377
+      }
+    },
+    "task_a_safety/yoruba/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#F#": 3,
+        "AG#D#A#": 3,
+        "AG#A#": 2
+      },
+      "language_values": {
+        "yo": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.3,
+        "median": 26.0,
+        "max": 51
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 103.9,
+        "median": 98.0,
+        "max": 295
+      },
+      "label_distribution": {
+        "safe": 61,
+        "unsafe": 59
+      }
+    },
+    "task_a_safety/yoruba/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#F#": 3,
+        "AG#D#A#": 3,
+        "AG#A#": 2
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/yoruba/train": {
+      "rows": 848,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 10,
+        "AG#": 9,
+        "AG#F#": 8
+      },
+      "language_values": {
+        "yo": 848
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.4,
+        "median": 26.0,
+        "max": 272
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 101.6,
+        "median": 94.0,
+        "max": 253
+      },
+      "label_distribution": {
+        "unsafe": 447,
+        "safe": 401
+      }
+    },
+    "task_a_safety/zulu/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#B#F": 2,
+        "AG#D#F#": 2
+      },
+      "language_values": {
+        "zu": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.3,
+        "median": 16.0,
+        "max": 29
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 65.4,
+        "median": 58.0,
+        "max": 305
+      },
+      "label_distribution": {
+        "unsafe": 60,
+        "safe": 60
+      }
+    },
+    "task_a_safety/zulu/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#B#F": 2,
+        "AG#D#F#": 2
+      },
+      "label_distribution": {
+        "unsafe": 120
+      }
+    },
+    "task_a_safety/zulu/train": {
+      "rows": 876,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#": 15,
+        "AG#A#": 10,
+        "AG#F#": 9
+      },
+      "language_values": {
+        "zu": 876
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.4,
+        "median": 15.0,
+        "max": 207
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 63.8,
+        "median": 59.0,
+        "max": 218
+      },
+      "label_distribution": {
+        "unsafe": 474,
+        "safe": 402
+      }
+    },
+    "task_b_category/amharic/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#C#": 2
+      },
+      "language_values": {
+        "am": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.9,
+        "median": 16.0,
+        "max": 30
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 66.7,
+        "median": 63.5,
+        "max": 174
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 13,
+        "Unsafe or High-Risk Advice": 12,
+        "Sexual & Exploitative Content": 12,
+        "Privacy & Data Misuse": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Ethical & Moral Risk": 12,
+        "Violence & Physical Harm": 12,
+        "Systemic Risks": 12,
+        "Political & Societal Manipulation": 12,
+        "Intellectual Property & Content Integrity": 11
+      }
+    },
+    "task_b_category/amharic/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#C#": 2
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 120
+      }
+    },
+    "task_b_category/amharic/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#B#": 11,
+        "AG#": 8,
+        "AG#F#": 7
+      },
+      "language_values": {
+        "am": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.8,
+        "median": 16.0,
+        "max": 39
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 67.5,
+        "median": 64.0,
+        "max": 207
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 153,
+        "Political & Societal Manipulation": 122,
+        "Unsafe or High-Risk Advice": 110,
+        "Systemic Risks": 105,
+        "Privacy & Data Misuse": 103,
+        "Ethical & Moral Risk": 87,
+        "Hate, Harassment & Discrimination": 57,
+        "Violence & Physical Harm": 48,
+        "Sexual & Exploitative Content": 45,
+        "Intellectual Property & Content Integrity": 30
+      }
+    },
+    "task_b_category/hausa/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#B#": 2,
+        "AG#D#EC#D": 1,
+        "AG#E#D#BB": 1
+      },
+      "language_values": {
+        "ha": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 25.1,
+        "median": 24.0,
+        "max": 49
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 97.9,
+        "median": 89.0,
+        "max": 287
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 16,
+        "Violence & Physical Harm": 13,
+        "Sexual & Exploitative Content": 13,
+        "Systemic Risks": 12,
+        "Political & Societal Manipulation": 12,
+        "Unsafe or High-Risk Advice": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Intellectual Property & Content Integrity": 11,
+        "Privacy & Data Misuse": 10,
+        "Ethical & Moral Risk": 9
+      }
+    },
+    "task_b_category/hausa/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#B#": 2,
+        "AG#D#EC#D": 1,
+        "AG#E#D#BB": 1
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 120
+      }
+    },
+    "task_b_category/hausa/train": {
+      "rows": 848,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 10,
+        "AG#": 7,
+        "AG#D#F#": 6
+      },
+      "language_values": {
+        "ha": 848
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 25.8,
+        "median": 25.0,
+        "max": 292
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 98.4,
+        "median": 91.0,
+        "max": 241
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 216,
+        "Violence & Physical Harm": 157,
+        "Political & Societal Manipulation": 115,
+        "Systemic Risks": 79,
+        "Sexual & Exploitative Content": 67,
+        "Hate, Harassment & Discrimination": 59,
+        "Unsafe or High-Risk Advice": 47,
+        "Intellectual Property & Content Integrity": 39,
+        "Privacy & Data Misuse": 38,
+        "Ethical & Moral Risk": 31
+      }
+    },
+    "task_b_category/igbo/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#BF#": 1,
+        "AG#FD#CCC#D": 1
+      },
+      "language_values": {
+        "ig": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 23.8,
+        "median": 22.0,
+        "max": 46
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 93.7,
+        "median": 89.5,
+        "max": 273
+      },
+      "label_distribution": {
+        "Privacy & Data Misuse": 13,
+        "Political & Societal Manipulation": 13,
+        "Intellectual Property & Content Integrity": 13,
+        "Hate, Harassment & Discrimination": 13,
+        "Violence & Physical Harm": 12,
+        "Unsafe or High-Risk Advice": 12,
+        "Systemic Risks": 12,
+        "Criminal Activity & Exploitation": 12,
+        "Sexual & Exploitative Content": 11,
+        "Ethical & Moral Risk": 9
+      }
+    },
+    "task_b_category/igbo/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#BF#": 1,
+        "AG#FD#CCC#D": 1
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 120
+      }
+    },
+    "task_b_category/igbo/train": {
+      "rows": 848,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 12,
+        "AG#E#": 9,
+        "AG#": 8
+      },
+      "language_values": {
+        "ig": 848
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 24.1,
+        "median": 23.0,
+        "max": 292
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 92.3,
+        "median": 86.0,
+        "max": 235
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 165,
+        "Violence & Physical Harm": 148,
+        "Political & Societal Manipulation": 114,
+        "Privacy & Data Misuse": 104,
+        "Hate, Harassment & Discrimination": 73,
+        "Unsafe or High-Risk Advice": 66,
+        "Systemic Risks": 57,
+        "Sexual & Exploitative Content": 55,
+        "Intellectual Property & Content Integrity": 37,
+        "Ethical & Moral Risk": 29
+      }
+    },
+    "task_b_category/oromo/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#": 2
+      },
+      "language_values": {
+        "om": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 17.8,
+        "median": 17.0,
+        "max": 35
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 70.8,
+        "median": 66.5,
+        "max": 202
+      },
+      "label_distribution": {
+        "Systemic Risks": 12,
+        "Sexual & Exploitative Content": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Violence & Physical Harm": 12,
+        "Intellectual Property & Content Integrity": 12,
+        "Unsafe or High-Risk Advice": 12,
+        "Privacy & Data Misuse": 12,
+        "Political & Societal Manipulation": 12,
+        "Ethical & Moral Risk": 12,
+        "Criminal Activity & Exploitation": 12
+      }
+    },
+    "task_b_category/oromo/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#A#": 3,
+        "AG#": 2
+      },
+      "label_distribution": {
+        "Political & Societal Manipulation": 120
+      }
+    },
+    "task_b_category/oromo/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#F#": 5,
+        "AG#F#": 5,
+        "AG#D#D#": 5
+      },
+      "language_values": {
+        "om": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 17.8,
+        "median": 17.0,
+        "max": 42
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 70.0,
+        "median": 65.0,
+        "max": 216
+      },
+      "label_distribution": {
+        "Political & Societal Manipulation": 128,
+        "Ethical & Moral Risk": 127,
+        "Criminal Activity & Exploitation": 109,
+        "Systemic Risks": 102,
+        "Privacy & Data Misuse": 92,
+        "Violence & Physical Harm": 90,
+        "Hate, Harassment & Discrimination": 59,
+        "Unsafe or High-Risk Advice": 55,
+        "Sexual & Exploitative Content": 51,
+        "Intellectual Property & Content Integrity": 47
+      }
+    },
+    "task_b_category/shona/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 2,
+        "AG#DD#": 2,
+        "AG#D#CC#": 1
+      },
+      "language_values": {
+        "sn": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.6,
+        "median": 16.0,
+        "max": 40
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 64.9,
+        "median": 60.0,
+        "max": 151
+      },
+      "label_distribution": {
+        "Intellectual Property & Content Integrity": 12,
+        "Systemic Risks": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Violence & Physical Harm": 12,
+        "Privacy & Data Misuse": 12,
+        "Unsafe or High-Risk Advice": 12,
+        "Criminal Activity & Exploitation": 12,
+        "Ethical & Moral Risk": 12,
+        "Sexual & Exploitative Content": 12,
+        "Political & Societal Manipulation": 12
+      }
+    },
+    "task_b_category/shona/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#C#": 2,
+        "AG#DD#": 2,
+        "AG#D#CC#": 1
+      },
+      "label_distribution": {
+        "Unsafe or High-Risk Advice": 120
+      }
+    },
+    "task_b_category/shona/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 7,
+        "AG#A#": 7,
+        "AG#F#": 6
+      },
+      "language_values": {
+        "sn": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.3,
+        "median": 16.0,
+        "max": 38
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 65.4,
+        "median": 60.0,
+        "max": 186
+      },
+      "label_distribution": {
+        "Unsafe or High-Risk Advice": 264,
+        "Political & Societal Manipulation": 164,
+        "Criminal Activity & Exploitation": 83,
+        "Ethical & Moral Risk": 82,
+        "Privacy & Data Misuse": 72,
+        "Sexual & Exploitative Content": 59,
+        "Intellectual Property & Content Integrity": 49,
+        "Violence & Physical Harm": 46,
+        "Hate, Harassment & Discrimination": 25,
+        "Systemic Risks": 16
+      }
+    },
+    "task_b_category/swahili/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 3,
+        "AGF#EA#": 1,
+        "AGB#DF#C#A#": 1
+      },
+      "language_values": {
+        "sw": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 22.6,
+        "median": 22.0,
+        "max": 50
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 92.9,
+        "median": 84.0,
+        "max": 246
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 13,
+        "Unsafe or High-Risk Advice": 12,
+        "Privacy & Data Misuse": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Political & Societal Manipulation": 12,
+        "Systemic Risks": 12,
+        "Violence & Physical Harm": 12,
+        "Intellectual Property & Content Integrity": 12,
+        "Sexual & Exploitative Content": 12,
+        "Ethical & Moral Risk": 11
+      }
+    },
+    "task_b_category/swahili/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 3,
+        "AGF#EA#": 1,
+        "AGB#DF#C#A#": 1
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 120
+      }
+    },
+    "task_b_category/swahili/train": {
+      "rows": 860,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#F#": 9,
+        "AG#A#": 8,
+        "AG#B#": 7
+      },
+      "language_values": {
+        "sw": 860
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 23.6,
+        "median": 22.0,
+        "max": 50
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 87.2,
+        "median": 79.0,
+        "max": 275
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 191,
+        "Unsafe or High-Risk Advice": 163,
+        "Political & Societal Manipulation": 81,
+        "Hate, Harassment & Discrimination": 79,
+        "Privacy & Data Misuse": 74,
+        "Sexual & Exploitative Content": 71,
+        "Systemic Risks": 65,
+        "Intellectual Property & Content Integrity": 60,
+        "Violence & Physical Harm": 51,
+        "Ethical & Moral Risk": 25
+      }
+    },
+    "task_b_category/twi/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#D#D#": 2,
+        "AGE#D#": 2,
+        "AG#ED#D#": 1
+      },
+      "language_values": {
+        "tw": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 30.6,
+        "median": 27.0,
+        "max": 280
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 107.4,
+        "median": 100.0,
+        "max": 278
+      },
+      "label_distribution": {
+        "Violence & Physical Harm": 12,
+        "Political & Societal Manipulation": 12,
+        "Intellectual Property & Content Integrity": 12,
+        "Systemic Risks": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Criminal Activity & Exploitation": 12,
+        "Ethical & Moral Risk": 12,
+        "Privacy & Data Misuse": 12,
+        "Sexual & Exploitative Content": 12,
+        "Unsafe or High-Risk Advice": 12
+      }
+    },
+    "task_b_category/twi/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#D#D#": 2,
+        "AGE#D#": 2,
+        "AG#ED#D#": 1
+      },
+      "label_distribution": {
+        "Political & Societal Manipulation": 120
+      }
+    },
+    "task_b_category/twi/train": {
+      "rows": 880,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 9,
+        "AG#C#": 9,
+        "AG#F#": 6
+      },
+      "language_values": {
+        "tw": 880
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.9,
+        "median": 27.0,
+        "max": 61
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 106.1,
+        "median": 98.0,
+        "max": 340
+      },
+      "label_distribution": {
+        "Political & Societal Manipulation": 142,
+        "Privacy & Data Misuse": 131,
+        "Criminal Activity & Exploitation": 118,
+        "Unsafe or High-Risk Advice": 103,
+        "Violence & Physical Harm": 91,
+        "Ethical & Moral Risk": 67,
+        "Systemic Risks": 66,
+        "Sexual & Exploitative Content": 57,
+        "Hate, Harassment & Discrimination": 56,
+        "Intellectual Property & Content Integrity": 49
+      }
+    },
+    "task_b_category/wolof/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#D#D#": 2,
+        "AGBE#E#BA#": 1
+      },
+      "language_values": {
+        "wo": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 28.6,
+        "median": 27.0,
+        "max": 65
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 99.0,
+        "median": 94.0,
+        "max": 224
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 15,
+        "Sexual & Exploitative Content": 12,
+        "Unsafe or High-Risk Advice": 12,
+        "Ethical & Moral Risk": 12,
+        "Intellectual Property & Content Integrity": 12,
+        "Political & Societal Manipulation": 12,
+        "Violence & Physical Harm": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Privacy & Data Misuse": 12,
+        "Systemic Risks": 9
+      }
+    },
+    "task_b_category/wolof/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 2,
+        "AG#D#D#": 2,
+        "AGBE#E#BA#": 1
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 120
+      }
+    },
+    "task_b_category/wolof/train": {
+      "rows": 867,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 2,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 10,
+        "AG#D#": 9,
+        "AG#C#": 8
+      },
+      "language_values": {
+        "wo": 867
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.7,
+        "median": 25.0,
+        "max": 263
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 96.4,
+        "median": 91.0,
+        "max": 288
+      },
+      "label_distribution": {
+        "Criminal Activity & Exploitation": 178,
+        "Political & Societal Manipulation": 129,
+        "Unsafe or High-Risk Advice": 106,
+        "Violence & Physical Harm": 98,
+        "Ethical & Moral Risk": 81,
+        "Systemic Risks": 79,
+        "Privacy & Data Misuse": 74,
+        "Hate, Harassment & Discrimination": 46,
+        "Sexual & Exploitative Content": 42,
+        "Intellectual Property & Content Integrity": 34
+      }
+    },
+    "task_b_category/yoruba/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#F#": 3,
+        "AG#D#A#": 3,
+        "AG#A#": 2
+      },
+      "language_values": {
+        "yo": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.3,
+        "median": 26.0,
+        "max": 51
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 103.9,
+        "median": 98.0,
+        "max": 295
+      },
+      "label_distribution": {
+        "Violence & Physical Harm": 13,
+        "Systemic Risks": 13,
+        "Criminal Activity & Exploitation": 13,
+        "Privacy & Data Misuse": 12,
+        "Hate, Harassment & Discrimination": 12,
+        "Unsafe or High-Risk Advice": 12,
+        "Intellectual Property & Content Integrity": 12,
+        "Sexual & Exploitative Content": 12,
+        "Political & Societal Manipulation": 12,
+        "Ethical & Moral Risk": 9
+      }
+    },
+    "task_b_category/yoruba/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#F#": 3,
+        "AG#D#A#": 3,
+        "AG#A#": 2
+      },
+      "label_distribution": {
+        "Systemic Risks": 120
+      }
+    },
+    "task_b_category/yoruba/train": {
+      "rows": 848,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#A#": 10,
+        "AG#": 9,
+        "AG#F#": 8
+      },
+      "language_values": {
+        "yo": 848
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 27.4,
+        "median": 26.0,
+        "max": 272
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 101.6,
+        "median": 94.0,
+        "max": 253
+      },
+      "label_distribution": {
+        "Systemic Risks": 168,
+        "Violence & Physical Harm": 157,
+        "Criminal Activity & Exploitation": 130,
+        "Political & Societal Manipulation": 93,
+        "Privacy & Data Misuse": 70,
+        "Ethical & Moral Risk": 57,
+        "Sexual & Exploitative Content": 49,
+        "Unsafe or High-Risk Advice": 43,
+        "Hate, Harassment & Discrimination": 43,
+        "Intellectual Property & Content Integrity": 38
+      }
+    },
+    "task_b_category/zulu/dev": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#B#F": 2,
+        "AG#D#F#": 2
+      },
+      "language_values": {
+        "zu": 120
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.3,
+        "median": 16.0,
+        "max": 29
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 65.4,
+        "median": 58.0,
+        "max": 305
+      },
+      "label_distribution": {
+        "Hate, Harassment & Discrimination": 12,
+        "Intellectual Property & Content Integrity": 12,
+        "Ethical & Moral Risk": 12,
+        "Violence & Physical Harm": 12,
+        "Privacy & Data Misuse": 12,
+        "Criminal Activity & Exploitation": 12,
+        "Sexual & Exploitative Content": 12,
+        "Systemic Risks": 12,
+        "Unsafe or High-Risk Advice": 12,
+        "Political & Societal Manipulation": 12
+      }
+    },
+    "task_b_category/zulu/sample_submission": {
+      "rows": 120,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "missing_columns": [
+        "language",
+        "prompt",
+        "response"
+      ],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#E#": 3,
+        "AG#B#F": 2,
+        "AG#D#F#": 2
+      },
+      "label_distribution": {
+        "Ethical & Moral Risk": 120
+      }
+    },
+    "task_b_category/zulu/train": {
+      "rows": 876,
+      "columns": [
+        "id",
+        "language",
+        "prompt",
+        "response",
+        "label"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "blank_by_column": {
+        "id": 0,
+        "language": 0,
+        "prompt": 0,
+        "response": 1,
+        "label": 0
+      },
+      "duplicate_ids": 0,
+      "id_patterns": {
+        "AG#": 15,
+        "AG#A#": 10,
+        "AG#F#": 9
+      },
+      "language_values": {
+        "zu": 876
+      },
+      "duplicate_prompts_normalised": 0,
+      "prompt_words": {
+        "mean": 16.4,
+        "median": 15.0,
+        "max": 207
+      },
+      "duplicate_prompt_response_pairs": 0,
+      "response_words": {
+        "mean": 63.8,
+        "median": 59.0,
+        "max": 218
+      },
+      "label_distribution": {
+        "Ethical & Moral Risk": 326,
+        "Criminal Activity & Exploitation": 157,
+        "Political & Societal Manipulation": 77,
+        "Hate, Harassment & Discrimination": 65,
+        "Unsafe or High-Risk Advice": 50,
+        "Violence & Physical Harm": 50,
+        "Sexual & Exploitative Content": 43,
+        "Intellectual Property & Content Integrity": 39,
+        "Privacy & Data Misuse": 35,
+        "Systemic Risks": 34
+      }
+    }
+  },
+  "label_tables": {
+    "task_a_safety": {
+      "total": {
+        "unsafe": 5208,
+        "safe": 4599
+      },
+      "by_language": {
+        "amharic": {
+          "safe": 453,
+          "unsafe": 527
+        },
+        "hausa": {
+          "safe": 478,
+          "unsafe": 490
+        },
+        "igbo": {
+          "safe": 479,
+          "unsafe": 489
+        },
+        "oromo": {
+          "safe": 443,
+          "unsafe": 537
+        },
+        "shona": {
+          "safe": 475,
+          "unsafe": 505
+        },
+        "swahili": {
+          "safe": 422,
+          "unsafe": 558
+        },
+        "twi": {
+          "safe": 488,
+          "unsafe": 512
+        },
+        "wolof": {
+          "safe": 437,
+          "unsafe": 550
+        },
+        "yoruba": {
+          "safe": 462,
+          "unsafe": 506
+        },
+        "zulu": {
+          "safe": 462,
+          "unsafe": 534
+        }
+      }
+    },
+    "task_b_category": {
+      "total": {
+        "Criminal Activity & Exploitation": 1630,
+        "Political & Societal Manipulation": 1286,
+        "Unsafe or High-Risk Advice": 1127,
+        "Violence & Physical Harm": 1058,
+        "Ethical & Moral Risk": 1022,
+        "Privacy & Data Misuse": 912,
+        "Systemic Risks": 889,
+        "Hate, Harassment & Discrimination": 683,
+        "Sexual & Exploitative Content": 659,
+        "Intellectual Property & Content Integrity": 541
+      },
+      "by_language": {
+        "amharic": {
+          "Criminal Activity & Exploitation": 166,
+          "Ethical & Moral Risk": 99,
+          "Hate, Harassment & Discrimination": 69,
+          "Intellectual Property & Content Integrity": 41,
+          "Political & Societal Manipulation": 134,
+          "Privacy & Data Misuse": 115,
+          "Sexual & Exploitative Content": 57,
+          "Systemic Risks": 117,
+          "Unsafe or High-Risk Advice": 122,
+          "Violence & Physical Harm": 60
+        },
+        "hausa": {
+          "Criminal Activity & Exploitation": 232,
+          "Ethical & Moral Risk": 40,
+          "Hate, Harassment & Discrimination": 71,
+          "Intellectual Property & Content Integrity": 50,
+          "Political & Societal Manipulation": 127,
+          "Privacy & Data Misuse": 48,
+          "Sexual & Exploitative Content": 80,
+          "Systemic Risks": 91,
+          "Unsafe or High-Risk Advice": 59,
+          "Violence & Physical Harm": 170
+        },
+        "igbo": {
+          "Criminal Activity & Exploitation": 177,
+          "Ethical & Moral Risk": 38,
+          "Hate, Harassment & Discrimination": 86,
+          "Intellectual Property & Content Integrity": 50,
+          "Political & Societal Manipulation": 127,
+          "Privacy & Data Misuse": 117,
+          "Sexual & Exploitative Content": 66,
+          "Systemic Risks": 69,
+          "Unsafe or High-Risk Advice": 78,
+          "Violence & Physical Harm": 160
+        },
+        "oromo": {
+          "Criminal Activity & Exploitation": 121,
+          "Ethical & Moral Risk": 139,
+          "Hate, Harassment & Discrimination": 71,
+          "Intellectual Property & Content Integrity": 59,
+          "Political & Societal Manipulation": 140,
+          "Privacy & Data Misuse": 104,
+          "Sexual & Exploitative Content": 63,
+          "Systemic Risks": 114,
+          "Unsafe or High-Risk Advice": 67,
+          "Violence & Physical Harm": 102
+        },
+        "shona": {
+          "Criminal Activity & Exploitation": 95,
+          "Ethical & Moral Risk": 94,
+          "Hate, Harassment & Discrimination": 37,
+          "Intellectual Property & Content Integrity": 61,
+          "Political & Societal Manipulation": 176,
+          "Privacy & Data Misuse": 84,
+          "Sexual & Exploitative Content": 71,
+          "Systemic Risks": 28,
+          "Unsafe or High-Risk Advice": 276,
+          "Violence & Physical Harm": 58
+        },
+        "swahili": {
+          "Criminal Activity & Exploitation": 204,
+          "Ethical & Moral Risk": 36,
+          "Hate, Harassment & Discrimination": 91,
+          "Intellectual Property & Content Integrity": 72,
+          "Political & Societal Manipulation": 93,
+          "Privacy & Data Misuse": 86,
+          "Sexual & Exploitative Content": 83,
+          "Systemic Risks": 77,
+          "Unsafe or High-Risk Advice": 175,
+          "Violence & Physical Harm": 63
+        },
+        "twi": {
+          "Criminal Activity & Exploitation": 130,
+          "Ethical & Moral Risk": 79,
+          "Hate, Harassment & Discrimination": 68,
+          "Intellectual Property & Content Integrity": 61,
+          "Political & Societal Manipulation": 154,
+          "Privacy & Data Misuse": 143,
+          "Sexual & Exploitative Content": 69,
+          "Systemic Risks": 78,
+          "Unsafe or High-Risk Advice": 115,
+          "Violence & Physical Harm": 103
+        },
+        "wolof": {
+          "Criminal Activity & Exploitation": 193,
+          "Ethical & Moral Risk": 93,
+          "Hate, Harassment & Discrimination": 58,
+          "Intellectual Property & Content Integrity": 46,
+          "Political & Societal Manipulation": 141,
+          "Privacy & Data Misuse": 86,
+          "Sexual & Exploitative Content": 54,
+          "Systemic Risks": 88,
+          "Unsafe or High-Risk Advice": 118,
+          "Violence & Physical Harm": 110
+        },
+        "yoruba": {
+          "Criminal Activity & Exploitation": 143,
+          "Ethical & Moral Risk": 66,
+          "Hate, Harassment & Discrimination": 55,
+          "Intellectual Property & Content Integrity": 50,
+          "Political & Societal Manipulation": 105,
+          "Privacy & Data Misuse": 82,
+          "Sexual & Exploitative Content": 61,
+          "Systemic Risks": 181,
+          "Unsafe or High-Risk Advice": 55,
+          "Violence & Physical Harm": 170
+        },
+        "zulu": {
+          "Criminal Activity & Exploitation": 169,
+          "Ethical & Moral Risk": 338,
+          "Hate, Harassment & Discrimination": 77,
+          "Intellectual Property & Content Integrity": 51,
+          "Political & Societal Manipulation": 89,
+          "Privacy & Data Misuse": 47,
+          "Sexual & Exploitative Content": 55,
+          "Systemic Risks": 46,
+          "Unsafe or High-Risk Advice": 62,
+          "Violence & Physical Harm": 62
+        }
+      }
+    }
+  },
+  "cross_task_consistency": {
+    "amharic/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "amharic/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "hausa/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "hausa/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "igbo/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "igbo/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "oromo/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "oromo/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "shona/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "shona/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "swahili/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "swahili/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "twi/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "twi/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "wolof/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "wolof/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "yoruba/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "yoruba/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "zulu/train": {
+      "same_ids": true,
+      "same_prompt_response": true
+    },
+    "zulu/dev": {
+      "same_ids": true,
+      "same_prompt_response": true
+    }
+  },
+  "task_a_vs_b": {
+    "safe": {
+      "Criminal Activity & Exploitation": 360,
+      "Ethical & Moral Risk": 899,
+      "Hate, Harassment & Discrimination": 171,
+      "Intellectual Property & Content Integrity": 232,
+      "Political & Societal Manipulation": 708,
+      "Privacy & Data Misuse": 400,
+      "Sexual & Exploitative Content": 187,
+      "Systemic Risks": 694,
+      "Unsafe or High-Risk Advice": 686,
+      "Violence & Physical Harm": 262
+    },
+    "unsafe": {
+      "Criminal Activity & Exploitation": 1270,
+      "Ethical & Moral Risk": 123,
+      "Hate, Harassment & Discrimination": 512,
+      "Intellectual Property & Content Integrity": 309,
+      "Political & Societal Manipulation": 578,
+      "Privacy & Data Misuse": 512,
+      "Sexual & Exploitative Content": 472,
+      "Systemic Risks": 195,
+      "Unsafe or High-Risk Advice": 441,
+      "Violence & Physical Harm": 796
+    }
+  },
+  "split_integrity": {
+    "amharic/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "hausa/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "igbo/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "oromo/train&dev": {
+      "id": 0,
+      "prompt": 1,
+      "response": 0
+    },
+    "shona/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "swahili/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "twi/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "wolof/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "yoruba/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    },
+    "zulu/train&dev": {
+      "id": 0,
+      "prompt": 0,
+      "response": 0
+    }
+  },
+  "neighbours": {
+    "amharic": {
+      "dev_to_train": {
+        "median_max_cos": 0.242,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.232,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 858,
+        "singletons": 856,
+        "max_size": 2,
+        "clusters_with_both_labels": 1
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 860,
+        "singletons": 860,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 860,
+        "singletons": 860,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "hausa": {
+      "dev_to_train": {
+        "median_max_cos": 0.393,
+        "share_ge_0.8": 0.008,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.396,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 789,
+        "singletons": 746,
+        "max_size": 6,
+        "clusters_with_both_labels": 21
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 848,
+        "singletons": 848,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 848,
+        "singletons": 848,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "igbo": {
+      "dev_to_train": {
+        "median_max_cos": 0.416,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.405,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 770,
+        "singletons": 722,
+        "max_size": 7,
+        "clusters_with_both_labels": 20
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 847,
+        "singletons": 846,
+        "max_size": 2,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 848,
+        "singletons": 848,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "oromo": {
+      "dev_to_train": {
+        "median_max_cos": 0.366,
+        "share_ge_0.8": 0.008,
+        "share_ge_0.9": 0.008
+      },
+      "train_internal": {
+        "median_nn_cos": 0.364,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 829,
+        "singletons": 805,
+        "max_size": 5,
+        "clusters_with_both_labels": 8
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 858,
+        "singletons": 856,
+        "max_size": 2,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 860,
+        "singletons": 860,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "shona": {
+      "dev_to_train": {
+        "median_max_cos": 0.354,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.349,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 835,
+        "singletons": 813,
+        "max_size": 4,
+        "clusters_with_both_labels": 5
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 860,
+        "singletons": 860,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 860,
+        "singletons": 860,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "swahili": {
+      "dev_to_train": {
+        "median_max_cos": 0.362,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.358,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 838,
+        "singletons": 816,
+        "max_size": 2,
+        "clusters_with_both_labels": 7
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 859,
+        "singletons": 858,
+        "max_size": 2,
+        "clusters_with_both_labels": 1
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 860,
+        "singletons": 860,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "twi": {
+      "dev_to_train": {
+        "median_max_cos": 0.371,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.367,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 829,
+        "singletons": 792,
+        "max_size": 4,
+        "clusters_with_both_labels": 15
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 880,
+        "singletons": 880,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 880,
+        "singletons": 880,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "wolof": {
+      "dev_to_train": {
+        "median_max_cos": 0.356,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.35,
+        "share_ge_0.8": 0.005
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 841,
+        "singletons": 816,
+        "max_size": 3,
+        "clusters_with_both_labels": 6
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 865,
+        "singletons": 863,
+        "max_size": 2,
+        "clusters_with_both_labels": 1
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 867,
+        "singletons": 867,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "yoruba": {
+      "dev_to_train": {
+        "median_max_cos": 0.389,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.372,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 794,
+        "singletons": 759,
+        "max_size": 12,
+        "clusters_with_both_labels": 11
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 848,
+        "singletons": 848,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 848,
+        "singletons": 848,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    },
+    "zulu": {
+      "dev_to_train": {
+        "median_max_cos": 0.331,
+        "share_ge_0.8": 0.0,
+        "share_ge_0.9": 0.0
+      },
+      "train_internal": {
+        "median_nn_cos": 0.333,
+        "share_ge_0.8": 0.0
+      },
+      "clusters_cos_0.5": {
+        "n_clusters": 865,
+        "singletons": 855,
+        "max_size": 3,
+        "clusters_with_both_labels": 5
+      },
+      "clusters_cos_0.7": {
+        "n_clusters": 876,
+        "singletons": 876,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      },
+      "clusters_cos_0.85": {
+        "n_clusters": 876,
+        "singletons": 876,
+        "max_size": 1,
+        "clusters_with_both_labels": 0
+      }
+    }
+  },
+  "sample_submission": {}
+}
