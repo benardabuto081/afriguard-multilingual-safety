@@ -5,7 +5,7 @@ import re
 
 from .labels import labels_for, normalize_key
 
-_THINK = re.compile(r"<think>.*?</think>", re.S)
+_THINK = re.compile(r"<think>.*?</think>", re.DOTALL)
 
 
 def parse_label(text, task: str):

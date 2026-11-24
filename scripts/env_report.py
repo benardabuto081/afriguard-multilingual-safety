@@ -5,6 +5,7 @@ import shutil
 import sys
 from pathlib import Path
 
+
 def mem_gb():
     try:
         for line in Path("/proc/meminfo").read_text().splitlines():
