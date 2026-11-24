@@ -24,3 +24,5 @@ wandb/
 # results: keep reports, ignore raw predictions
 results/predictions/
 data/starting_kit/
+experiments/**/predictions/
+data/*.zip
