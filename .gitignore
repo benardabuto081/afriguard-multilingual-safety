@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+# competition data and artefacts stay out of Git
+data/raw/
+data/processed/
+data/external/
+models/*
+!models/README.md
+checkpoints/
+outputs/
+wandb/
+*.safetensors
+*.bin
+*.pt
+*.gguf
+# secrets
+.env
+*.key
+# results: keep reports, ignore raw predictions
+results/predictions/

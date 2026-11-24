@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Language-Aware Multilingual Adaptation for Robust Safety Classification in African Languages: A Study on AfriGuard"
+authors:
+  - family-names: "Otieno"
+    given-names: "Bernard Abuto"
+repository-code: "https://github.com/bernardabuto/afriguard-multilingual-safety"
+license: MIT

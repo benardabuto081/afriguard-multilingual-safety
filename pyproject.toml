@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "afriguard"
+version = "0.1.0"
+description = "Language-aware multilingual adaptation for robust safety classification in African languages (AfriGuard 2027)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Bernard Abuto Otieno" }]
+dependencies = ["numpy", "pandas", "pyyaml", "scikit-learn"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+train = ["torch", "transformers", "peft", "accelerate", "datasets", "bitsandbytes"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/afriguard"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
