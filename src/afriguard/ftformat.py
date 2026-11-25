@@ -55,9 +55,15 @@ def end_token(tok) -> str:
     return tok.eos_token
 
 
-def render_prompt(tok, model_id: str, user_text: str) -> str:
+def render_prompt(tok, model_id: str, user_text: str, template: str = "default") -> str:
+    """template="compact" (Tiny Aya only) skips Cohere's ~400-token default system preamble."""
+    if template == "compact":
+        if "aya" not in model_id.lower():
+            raise ValueError("compact template is only defined for Tiny Aya")
+        return ("<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>" + user_text
+                + "<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>")
     kw = {"enable_thinking": False} if "qwen3" in model_id.lower() else {}
     msgs = [{"role": "user", "content": user_text}]
-    if "aya" in model_id.lower():  # replaces the long default preamble in Cohere's chat template
+    if "aya" in model_id.lower():
         msgs.insert(0, {"role": "system", "content": SYSTEM})
     return tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, **kw)

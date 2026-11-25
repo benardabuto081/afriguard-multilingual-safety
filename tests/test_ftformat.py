@@ -28,3 +28,10 @@ def test_modes():
     assert format_answer("safe", "Systemic Risks", "B") == "category: Systemic Risks"
     assert "category" not in build_user_text("p", "r", True, 100, "A").split("Answer in the format:")[1]
     assert parse_answer(format_answer("safe", "Systemic Risks", "B")) == (None, "Systemic Risks")
+
+
+def test_compact_template():
+    from afriguard.ftformat import render_prompt
+    s = render_prompt(None, "CohereLabs/tiny-aya-earth", "hello", "compact")
+    assert s.startswith("<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>hello")
+    assert s.endswith("<|START_RESPONSE|>") and "Preamble" not in s

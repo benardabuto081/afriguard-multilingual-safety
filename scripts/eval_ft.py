@@ -52,6 +52,7 @@ def main():
     ap.add_argument("--adapter", default=None)
     ap.add_argument("--revision", default=None)
     ap.add_argument("--task-mode", default="joint", choices=["joint", "A", "B"])
+    ap.add_argument("--template", default="default", choices=["default", "compact"])
     ap.add_argument("--split", default="dev", choices=["dev", "test"])
     ap.add_argument("--languages", nargs="+", default=LANGUAGES)
     ap.add_argument("--limit", type=int, default=None)
@@ -91,7 +92,7 @@ def main():
         if a.limit:
             A, B = A.head(a.limit), B.head(a.limit)
         texts = [render_prompt(tok, a.model, build_user_text(r.prompt, r.response, not a.prompt_only,
-                                                             a.max_chars, a.task_mode)) for r in A.itertuples()]
+                                                             a.max_chars, a.task_mode), a.template) for r in A.itertuples()]
         raw = generate(model, tok, texts, a.batch_size, a.max_new_tokens)
         parsed = [parse_answer(x) for x in raw]
         preds = {"A": [p[0] or UNPARSED for p in parsed], "B": [p[1] or UNPARSED for p in parsed]}

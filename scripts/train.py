@@ -47,10 +47,10 @@ def load_joint(data_dir, langs, split):
     return pd.concat(frames, ignore_index=True)
 
 
-def encode(tok, model_id, row, max_len, end, use_response, mode):
+def encode(tok, model_id, row, max_len, end, use_response, mode, template="default"):
     ai = tok(format_answer(row.label_a, row.label_b, mode) + end, add_special_tokens=False)["input_ids"]
     for clip in (1500, 1000, 600, 300):
-        p = render_prompt(tok, model_id, build_user_text(row.prompt, row.response, use_response, clip, mode))
+        p = render_prompt(tok, model_id, build_user_text(row.prompt, row.response, use_response, clip, mode), template)
         pi = tok(p, add_special_tokens=False)["input_ids"]
         if len(pi) + len(ai) <= max_len:
             break
@@ -90,6 +90,7 @@ def main():
     ap.add_argument("--model", required=True)
     ap.add_argument("--revision", default=None)
     ap.add_argument("--task-mode", default="joint", choices=["joint", "A", "B"])
+    ap.add_argument("--template", default="default", choices=["default", "compact"])
     ap.add_argument("--splits", nargs="+", default=["train"])
     ap.add_argument("--languages", nargs="+", default=LANGUAGES)
     ap.add_argument("--prompt-only", action="store_true")
@@ -127,7 +128,7 @@ def main():
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     end = end_token(tok)
-    enc = [encode(tok, a.model, r, a.max_len, end, not a.prompt_only, a.task_mode) for r in df.itertuples()]
+    enc = [encode(tok, a.model, r, a.max_len, end, not a.prompt_only, a.task_mode, a.template) for r in df.itertuples()]
     lengths = [len(x[0]) for x in enc]
     print(f"examples={len(enc)} tokens mean={sum(lengths)/len(lengths):.0f} max={max(lengths)} "
           f"over_max_len={sum(n > a.max_len for n in lengths)} end_token={end!r} mode={a.task_mode}", flush=True)
