@@ -1,0 +1,36 @@
+{
+  "model": "Qwen/Qwen3-4B",
+  "revision": null,
+  "tasks": [
+    "A",
+    "B"
+  ],
+  "languages": [
+    "amharic",
+    "hausa",
+    "igbo",
+    "oromo",
+    "shona",
+    "swahili",
+    "twi",
+    "wolof",
+    "yoruba",
+    "zulu"
+  ],
+  "split": "dev",
+  "mode": "generate",
+  "shots": 0,
+  "prompt_only": false,
+  "max_chars": 1500,
+  "shot_chars": 500,
+  "max_new_tokens": 24,
+  "batch_size": 4,
+  "dtype": "float16",
+  "limit": null,
+  "seed": 42,
+  "data_dir": "data/raw",
+  "out_dir": "experiments/baselines",
+  "run_id": "Qwen-Qwen3-4B_generate_0shot_both_dev_20261125-055353",
+  "use_response": true,
+  "answer_format": "label"
+}

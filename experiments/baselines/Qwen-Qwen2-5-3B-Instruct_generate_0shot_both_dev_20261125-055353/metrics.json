@@ -1,0 +1,2567 @@
+{
+  "config": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": null,
+    "tasks": [
+      "A",
+      "B"
+    ],
+    "languages": [
+      "amharic",
+      "hausa",
+      "igbo",
+      "oromo",
+      "shona",
+      "swahili",
+      "twi",
+      "wolof",
+      "yoruba",
+      "zulu"
+    ],
+    "split": "dev",
+    "mode": "generate",
+    "shots": 0,
+    "prompt_only": false,
+    "max_chars": 1500,
+    "shot_chars": 500,
+    "max_new_tokens": 24,
+    "batch_size": 4,
+    "dtype": "float16",
+    "limit": null,
+    "seed": 42,
+    "data_dir": "data/raw",
+    "out_dir": "experiments/baselines",
+    "run_id": "Qwen-Qwen2-5-3B-Instruct_generate_0shot_both_dev_20261125-055353",
+    "use_response": true,
+    "answer_format": "label"
+  },
+  "env": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "cuda": true,
+    "gpu": "Tesla T4",
+    "gpu_mem_gb": 14.6
+  },
+  "tasks": {
+    "A": {
+      "per_language": {
+        "amharic": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 26.8,
+          "tokens_mean": 637.0666666666667,
+          "tokens_max": 1383,
+          "weighted_f1": 0.7413049726933026,
+          "macro_f1": 0.7413049726933026,
+          "accuracy": 0.75,
+          "per_class": {
+            "safe": {
+              "precision": 0.6829268292682927,
+              "recall": 0.9333333333333333,
+              "f1": 0.7887323943661971,
+              "support": 60
+            },
+            "unsafe": {
+              "precision": 0.8947368421052632,
+              "recall": 0.5666666666666667,
+              "f1": 0.6938775510204082,
+              "support": 60
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                56,
+                4
+              ],
+              [
+                26,
+                34
+              ]
+            ]
+          }
+        },
+        "hausa": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 15.5,
+          "tokens_mean": 347.5416666666667,
+          "tokens_max": 767,
+          "weighted_f1": 0.7402805843959771,
+          "macro_f1": 0.7407846143125915,
+          "accuracy": 0.7416666666666667,
+          "per_class": {
+            "safe": {
+              "precision": 0.803921568627451,
+              "recall": 0.6612903225806451,
+              "f1": 0.7256637168141593,
+              "support": 62
+            },
+            "unsafe": {
+              "precision": 0.6956521739130435,
+              "recall": 0.8275862068965517,
+              "f1": 0.7559055118110236,
+              "support": 58
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                41,
+                21
+              ],
+              [
+                10,
+                48
+              ]
+            ]
+          }
+        },
+        "igbo": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 16.8,
+          "tokens_mean": 376.225,
+          "tokens_max": 902,
+          "weighted_f1": 0.6237196014215037,
+          "macro_f1": 0.6237196014215037,
+          "accuracy": 0.625,
+          "per_class": {
+            "safe": {
+              "precision": 0.6119402985074627,
+              "recall": 0.6833333333333333,
+              "f1": 0.6456692913385826,
+              "support": 60
+            },
+            "unsafe": {
+              "precision": 0.6415094339622641,
+              "recall": 0.5666666666666667,
+              "f1": 0.6017699115044248,
+              "support": 60
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                41,
+                19
+              ],
+              [
+                26,
+                34
+              ]
+            ]
+          }
+        },
+        "oromo": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 15.7,
+          "tokens_mean": 357.06666666666666,
+          "tokens_max": 762,
+          "weighted_f1": 0.6747967479674796,
+          "macro_f1": 0.6747967479674797,
+          "accuracy": 0.675,
+          "per_class": {
+            "safe": {
+              "precision": 0.6666666666666666,
+              "recall": 0.7,
+              "f1": 0.6829268292682927,
+              "support": 60
+            },
+            "unsafe": {
+              "precision": 0.6842105263157895,
+              "recall": 0.65,
+              "f1": 0.6666666666666666,
+              "support": 60
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                42,
+                18
+              ],
+              [
+                21,
+                39
+              ]
+            ]
+          }
+        },
+        "shona": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 16.1,
+          "tokens_mean": 357.18333333333334,
+          "tokens_max": 710,
+          "weighted_f1": 0.6401141101601932,
+          "macro_f1": 0.640114110160193,
+          "accuracy": 0.6583333333333333,
+          "per_class": {
+            "safe": {
+              "precision": 0.7878787878787878,
+              "recall": 0.43333333333333335,
+              "f1": 0.5591397849462365,
+              "support": 60
+            },
+            "unsafe": {
+              "precision": 0.6091954022988506,
+              "recall": 0.8833333333333333,
+              "f1": 0.7210884353741497,
+              "support": 60
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                26,
+                34
+              ],
+              [
+                7,
+                53
+              ]
+            ]
+          }
+        },
+        "swahili": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 16.5,
+          "tokens_mean": 352.3666666666667,
+          "tokens_max": 769,
+          "weighted_f1": 0.8153846153846154,
+          "macro_f1": 0.8153846153846154,
+          "accuracy": 0.8166666666666667,
+          "per_class": {
+            "safe": {
+              "precision": 0.88,
+              "recall": 0.7333333333333333,
+              "f1": 0.8,
+              "support": 60
+            },
+            "unsafe": {
+              "precision": 0.7714285714285715,
+              "recall": 0.9,
+              "f1": 0.8307692307692308,
+              "support": 60
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                44,
+                16
+              ],
+              [
+                6,
+                54
+              ]
+            ]
+          }
+        },
+        "twi": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 19.0,
+          "tokens_mean": 394.09166666666664,
+          "tokens_max": 750,
+          "weighted_f1": 0.7243293150303115,
+          "macro_f1": 0.7240610410424361,
+          "accuracy": 0.725,
+          "per_class": {
+            "safe": {
+              "precision": 0.7121212121212122,
+              "recall": 0.7704918032786885,
+              "f1": 0.7401574803149606,
+              "support": 61
+            },
+            "unsafe": {
+              "precision": 0.7407407407407407,
+              "recall": 0.6779661016949152,
+              "f1": 0.7079646017699115,
+              "support": 59
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                47,
+                14
+              ],
+              [
+                19,
+                40
+              ]
+            ]
+          }
+        },
+        "wolof": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 16.3,
+          "tokens_mean": 347.26666666666665,
+          "tokens_max": 663,
+          "weighted_f1": 0.7058617550248617,
+          "macro_f1": 0.7058617550248617,
+          "accuracy": 0.7083333333333334,
+          "per_class": {
+            "safe": {
+              "precision": 0.676056338028169,
+              "recall": 0.8,
+              "f1": 0.732824427480916,
+              "support": 60
+            },
+            "unsafe": {
+              "precision": 0.7551020408163265,
+              "recall": 0.6166666666666667,
+              "f1": 0.6788990825688074,
+              "support": 60
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                48,
+                12
+              ],
+              [
+                23,
+                37
+              ]
+            ]
+          }
+        },
+        "yoruba": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 22.9,
+          "tokens_mean": 494.5416666666667,
+          "tokens_max": 1224,
+          "weighted_f1": 0.6648018648018648,
+          "macro_f1": 0.6643356643356644,
+          "accuracy": 0.6666666666666666,
+          "per_class": {
+            "safe": {
+              "precision": 0.6521739130434783,
+              "recall": 0.7377049180327869,
+              "f1": 0.6923076923076923,
+              "support": 61
+            },
+            "unsafe": {
+              "precision": 0.6862745098039216,
+              "recall": 0.5932203389830508,
+              "f1": 0.6363636363636364,
+              "support": 59
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                45,
+                16
+              ],
+              [
+                24,
+                35
+              ]
+            ]
+          }
+        },
+        "zulu": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 17.8,
+          "tokens_mean": 387.4,
+          "tokens_max": 773,
+          "weighted_f1": 0.6991188480550183,
+          "macro_f1": 0.6991188480550183,
+          "accuracy": 0.7083333333333334,
+          "per_class": {
+            "safe": {
+              "precision": 0.8205128205128205,
+              "recall": 0.5333333333333333,
+              "f1": 0.6464646464646465,
+              "support": 60
+            },
+            "unsafe": {
+              "precision": 0.654320987654321,
+              "recall": 0.8833333333333333,
+              "f1": 0.75177304964539,
+              "support": 60
+            }
+          },
+          "confusion": {
+            "labels": [
+              "safe",
+              "unsafe"
+            ],
+            "matrix": [
+              [
+                32,
+                28
+              ],
+              [
+                7,
+                53
+              ]
+            ]
+          }
+        }
+      },
+      "avg_weighted_f1": 0.7029712414935128,
+      "n_languages": 10
+    },
+    "B": {
+      "per_language": {
+        "amharic": {
+          "n": 120,
+          "unparsed_rate": 0.016666666666666666,
+          "seconds": 44.0,
+          "tokens_mean": 709.0666666666667,
+          "tokens_max": 1455,
+          "weighted_f1": 0.09602484472049691,
+          "macro_f1": 0.08729531338226991,
+          "accuracy": 0.15833333333333333,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 13
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.25,
+              "recall": 0.16666666666666666,
+              "f1": 0.2,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.3333333333333333,
+              "recall": 0.5,
+              "f1": 0.4,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.5,
+              "recall": 0.08333333333333333,
+              "f1": 0.14285714285714285,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.125,
+              "recall": 0.8333333333333334,
+              "f1": 0.21739130434782608,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 11
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity",
+              "__unparsed__"
+            ],
+            "matrix": [
+              [
+                0,
+                2,
+                1,
+                0,
+                0,
+                1,
+                0,
+                8,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                11,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                2,
+                0,
+                0,
+                1,
+                0,
+                8,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0,
+                0,
+                2,
+                0,
+                5,
+                1,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                10,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                6,
+                0,
+                6,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                10,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                10,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0,
+                0,
+                2,
+                0,
+                8,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                2,
+                0,
+                0,
+                2,
+                1,
+                4,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "hausa": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 29.3,
+          "tokens_mean": 419.5416666666667,
+          "tokens_max": 839,
+          "weighted_f1": 0.25866834961138285,
+          "macro_f1": 0.2542318461613124,
+          "accuracy": 0.30833333333333335,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.2,
+              "recall": 0.5625,
+              "f1": 0.29508196721311475,
+              "support": 16
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.42105263157894735,
+              "recall": 0.6666666666666666,
+              "f1": 0.5161290322580645,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.25,
+              "recall": 0.3076923076923077,
+              "f1": 0.27586206896551724,
+              "support": 13
+            },
+            "Systemic Risks": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "f1": 0.14285714285714285,
+              "support": 13
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.4117647058823529,
+              "recall": 0.5833333333333334,
+              "f1": 0.4827586206896552,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.8,
+              "recall": 0.4,
+              "f1": 0.5333333333333333,
+              "support": 10
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.26666666666666666,
+              "recall": 0.3333333333333333,
+              "f1": 0.2962962962962963,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 9
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 11
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                9,
+                1,
+                1,
+                0,
+                0,
+                2,
+                1,
+                2,
+                0,
+                0
+              ],
+              [
+                2,
+                8,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                3,
+                3,
+                4,
+                0,
+                0,
+                0,
+                0,
+                3,
+                0,
+                0
+              ],
+              [
+                7,
+                1,
+                0,
+                0,
+                0,
+                3,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                2,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                3,
+                1,
+                0,
+                7,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                1,
+                0,
+                0,
+                0,
+                1,
+                4,
+                1,
+                0,
+                1
+              ],
+              [
+                3,
+                2,
+                2,
+                0,
+                0,
+                1,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                5,
+                2,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                6,
+                0,
+                3,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "igbo": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 31.5,
+          "tokens_mean": 448.225,
+          "tokens_max": 974,
+          "weighted_f1": 0.33116364415154737,
+          "macro_f1": 0.3192680813809846,
+          "accuracy": 0.3416666666666667,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.2222222222222222,
+              "recall": 0.16666666666666666,
+              "f1": 0.19047619047619047,
+              "support": 12
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.5714285714285714,
+              "recall": 0.3076923076923077,
+              "f1": 0.4,
+              "support": 13
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.25,
+              "recall": 0.5,
+              "f1": 0.3333333333333333,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 1.0,
+              "recall": 0.08333333333333333,
+              "f1": 0.15384615384615385,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 0.6666666666666666,
+              "recall": 0.18181818181818182,
+              "f1": 0.2857142857142857,
+              "support": 11
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.42105263157894735,
+              "recall": 0.6666666666666666,
+              "f1": 0.5161290322580645,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.75,
+              "recall": 0.6923076923076923,
+              "f1": 0.72,
+              "support": 13
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.14285714285714285,
+              "recall": 0.46153846153846156,
+              "f1": 0.21818181818181817,
+              "support": 13
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 9
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 1.0,
+              "recall": 0.23076923076923078,
+              "f1": 0.375,
+              "support": 13
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                2,
+                1,
+                3,
+                0,
+                1,
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                4,
+                1,
+                0,
+                0,
+                0,
+                1,
+                7,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                6,
+                0,
+                0,
+                1,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                4,
+                1,
+                0,
+                0,
+                1,
+                6,
+                0,
+                0
+              ],
+              [
+                1,
+                2,
+                1,
+                0,
+                2,
+                0,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0,
+                0,
+                8,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                9,
+                2,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                4,
+                0,
+                0,
+                0,
+                0,
+                6,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                2,
+                0,
+                0,
+                1,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                3,
+                1,
+                5,
+                0,
+                3
+              ]
+            ]
+          }
+        },
+        "oromo": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 31.5,
+          "tokens_mean": 429.06666666666666,
+          "tokens_max": 834,
+          "weighted_f1": 0.2674361089621556,
+          "macro_f1": 0.2674361089621556,
+          "accuracy": 0.3,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.3076923076923077,
+              "recall": 0.3333333333333333,
+              "f1": 0.32,
+              "support": 12
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.3333333333333333,
+              "recall": 0.25,
+              "f1": 0.2857142857142857,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.2222222222222222,
+              "recall": 0.16666666666666666,
+              "f1": 0.19047619047619047,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 1.0,
+              "recall": 0.08333333333333333,
+              "f1": 0.15384615384615385,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 0.42857142857142855,
+              "recall": 0.25,
+              "f1": 0.3157894736842105,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.36363636363636365,
+              "recall": 0.3333333333333333,
+              "f1": 0.34782608695652173,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.5833333333333334,
+              "recall": 0.5833333333333334,
+              "f1": 0.5833333333333334,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.19642857142857142,
+              "recall": 0.9166666666666666,
+              "f1": 0.3235294117647059,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 1.0,
+              "recall": 0.08333333333333333,
+              "f1": 0.15384615384615385,
+              "support": 12
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                4,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                3,
+                0,
+                0,
+                0,
+                1,
+                0,
+                7,
+                0,
+                0
+              ],
+              [
+                3,
+                2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                2,
+                3,
+                1,
+                0,
+                0,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                3,
+                1,
+                0,
+                7,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                2,
+                0,
+                1,
+                4,
+                1,
+                3,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                2,
+                7,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                11,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                2,
+                4,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                2,
+                1,
+                7,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        "shona": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 30.2,
+          "tokens_mean": 429.18333333333334,
+          "tokens_max": 782,
+          "weighted_f1": 0.2667597407299925,
+          "macro_f1": 0.2667597407299925,
+          "accuracy": 0.30833333333333335,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.20833333333333334,
+              "recall": 0.4166666666666667,
+              "f1": 0.2777777777777778,
+              "support": 12
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1": 0.5,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.08333333333333333,
+              "recall": 0.08333333333333333,
+              "f1": 0.08333333333333333,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.32,
+              "recall": 0.6666666666666666,
+              "f1": 0.43243243243243246,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.45454545454545453,
+              "recall": 0.4166666666666667,
+              "f1": 0.43478260869565216,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.2222222222222222,
+              "recall": 0.5,
+              "f1": 0.3076923076923077,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 0.8571428571428571,
+              "recall": 0.5,
+              "f1": 0.631578947368421,
+              "support": 12
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                5,
+                1,
+                3,
+                0,
+                0,
+                2,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                2,
+                6,
+                0,
+                0,
+                0,
+                1,
+                0,
+                3,
+                0,
+                0
+              ],
+              [
+                4,
+                2,
+                1,
+                0,
+                0,
+                0,
+                0,
+                4,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                0,
+                4,
+                1,
+                4,
+                0,
+                0
+              ],
+              [
+                3,
+                1,
+                1,
+                0,
+                0,
+                3,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                1,
+                0,
+                0,
+                8,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                2,
+                1,
+                0,
+                0,
+                1,
+                3,
+                5,
+                0,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                6,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                3,
+                0,
+                0,
+                3,
+                2,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                2,
+                2,
+                0,
+                6
+              ]
+            ]
+          }
+        },
+        "swahili": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 28.7,
+          "tokens_mean": 424.3666666666667,
+          "tokens_max": 841,
+          "weighted_f1": 0.23124706430059025,
+          "macro_f1": 0.23067235165691208,
+          "accuracy": 0.25,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.0625,
+              "recall": 0.07692307692307693,
+              "f1": 0.06896551724137931,
+              "support": 13
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.2631578947368421,
+              "recall": 0.4166666666666667,
+              "f1": 0.3225806451612903,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.08333333333333333,
+              "recall": 0.08333333333333333,
+              "f1": 0.08333333333333333,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 1.0,
+              "recall": 0.08333333333333333,
+              "f1": 0.15384615384615385,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.15384615384615385,
+              "recall": 0.5,
+              "f1": 0.23529411764705882,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.6363636363636364,
+              "recall": 0.5833333333333334,
+              "f1": 0.6086956521739131,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.2857142857142857,
+              "recall": 0.3333333333333333,
+              "f1": 0.3076923076923077,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 11
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 0.7142857142857143,
+              "recall": 0.4166666666666667,
+              "f1": 0.5263157894736842,
+              "support": 12
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                1,
+                1,
+                3,
+                0,
+                0,
+                6,
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                5,
+                5,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                5,
+                2,
+                1,
+                0,
+                0,
+                3,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0,
+                0,
+                8,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                5,
+                0,
+                1,
+                0,
+                1,
+                2,
+                0,
+                3,
+                0,
+                0
+              ],
+              [
+                2,
+                1,
+                1,
+                0,
+                0,
+                6,
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                3,
+                7,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                4,
+                0,
+                0,
+                0,
+                3,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                1,
+                2,
+                0,
+                0,
+                0,
+                5,
+                0,
+                3,
+                0,
+                0
+              ],
+              [
+                0,
+                4,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                5
+              ]
+            ]
+          }
+        },
+        "twi": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 31.9,
+          "tokens_mean": 466.09166666666664,
+          "tokens_max": 822,
+          "weighted_f1": 0.366853205562883,
+          "macro_f1": 0.366853205562883,
+          "accuracy": 0.4166666666666667,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.3157894736842105,
+              "recall": 0.5,
+              "f1": 0.3870967741935484,
+              "support": 12
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.5333333333333333,
+              "recall": 0.6666666666666666,
+              "f1": 0.5925925925925926,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.25,
+              "recall": 0.16666666666666666,
+              "f1": 0.2,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.32,
+              "recall": 0.6666666666666666,
+              "f1": 0.43243243243243246,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334,
+              "f1": 0.7692307692307693,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.23333333333333334,
+              "recall": 0.5833333333333334,
+              "f1": 0.3333333333333333,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 1.0,
+              "recall": 0.08333333333333333,
+              "f1": 0.15384615384615385,
+              "support": 12
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8,
+              "support": 12
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                6,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                0,
+                0
+              ],
+              [
+                2,
+                8,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                3,
+                3,
+                2,
+                0,
+                0,
+                0,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                1,
+                0,
+                0,
+                6,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                3,
+                0,
+                0,
+                2,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0,
+                0,
+                8,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                10,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                1,
+                0,
+                0,
+                2,
+                0,
+                7,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0,
+                0,
+                2,
+                1,
+                6,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                8
+              ]
+            ]
+          }
+        },
+        "wolof": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 30.1,
+          "tokens_mean": 419.26666666666665,
+          "tokens_max": 735,
+          "weighted_f1": 0.30149143919581556,
+          "macro_f1": 0.30180393919581566,
+          "accuracy": 0.325,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.17647058823529413,
+              "recall": 0.2,
+              "f1": 0.1875,
+              "support": 15
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.375,
+              "recall": 0.5,
+              "f1": 0.42857142857142855,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.46153846153846156,
+              "recall": 0.5,
+              "f1": 0.48,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 1.0,
+              "recall": 0.1111111111111111,
+              "f1": 0.2,
+              "support": 9
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 0.5,
+              "recall": 0.08333333333333333,
+              "f1": 0.14285714285714285,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.3125,
+              "recall": 0.4166666666666667,
+              "f1": 0.35714285714285715,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.36363636363636365,
+              "recall": 0.3333333333333333,
+              "f1": 0.34782608695652173,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.23529411764705882,
+              "recall": 0.6666666666666666,
+              "f1": 0.34782608695652173,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 0.7142857142857143,
+              "recall": 0.4166666666666667,
+              "f1": 0.5263157894736842,
+              "support": 12
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                3,
+                3,
+                1,
+                0,
+                1,
+                3,
+                0,
+                3,
+                0,
+                1
+              ],
+              [
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                1,
+                3,
+                2,
+                0
+              ],
+              [
+                1,
+                1,
+                6,
+                0,
+                0,
+                0,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                2,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                3,
+                0,
+                1,
+                0,
+                1,
+                2,
+                0,
+                4,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                0,
+                5,
+                2,
+                2,
+                0,
+                0
+              ],
+              [
+                4,
+                1,
+                1,
+                0,
+                0,
+                0,
+                4,
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                2,
+                0,
+                0,
+                0,
+                0,
+                1,
+                8,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                1,
+                0,
+                0,
+                3,
+                2,
+                4,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                2,
+                0,
+                4,
+                0,
+                5
+              ]
+            ]
+          }
+        },
+        "yoruba": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 37.1,
+          "tokens_mean": 566.5416666666666,
+          "tokens_max": 1296,
+          "weighted_f1": 0.27757404215604736,
+          "macro_f1": 0.27235852491466805,
+          "accuracy": 0.31666666666666665,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.25,
+              "recall": 0.3076923076923077,
+              "f1": 0.27586206896551724,
+              "support": 13
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.7,
+              "recall": 0.5833333333333334,
+              "f1": 0.6363636363636364,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.25925925925925924,
+              "recall": 0.5384615384615384,
+              "f1": 0.35,
+              "support": 13
+            },
+            "Systemic Risks": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 13
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 1.0,
+              "recall": 0.16666666666666666,
+              "f1": 0.2857142857142857,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.25,
+              "recall": 0.4166666666666667,
+              "f1": 0.3125,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.6,
+              "recall": 0.25,
+              "f1": 0.35294117647058826,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.24324324324324326,
+              "recall": 0.75,
+              "f1": 0.3673469387755102,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 9
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 0.5,
+              "recall": 0.08333333333333333,
+              "f1": 0.14285714285714285,
+              "support": 12
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                4,
+                0,
+                1,
+                0,
+                0,
+                5,
+                0,
+                3,
+                0,
+                0
+              ],
+              [
+                1,
+                7,
+                2,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                7,
+                0,
+                0,
+                0,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                4,
+                0,
+                0,
+                3,
+                1,
+                3,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                3,
+                0,
+                2,
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                4,
+                0,
+                0,
+                5,
+                0,
+                3,
+                0,
+                0
+              ],
+              [
+                2,
+                1,
+                1,
+                0,
+                0,
+                0,
+                3,
+                3,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                3,
+                0,
+                0,
+                0,
+                0,
+                9,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                6,
+                1,
+                3,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        "zulu": {
+          "n": 120,
+          "unparsed_rate": 0.0,
+          "seconds": 32.3,
+          "tokens_mean": 459.4,
+          "tokens_max": 845,
+          "weighted_f1": 0.3181090776231441,
+          "macro_f1": 0.3181090776231441,
+          "accuracy": 0.35833333333333334,
+          "per_class": {
+            "Criminal Activity & Exploitation": {
+              "precision": 0.3125,
+              "recall": 0.4166666666666667,
+              "f1": 0.35714285714285715,
+              "support": 12
+            },
+            "Political & Societal Manipulation": {
+              "precision": 0.7777777777777778,
+              "recall": 0.5833333333333334,
+              "f1": 0.6666666666666666,
+              "support": 12
+            },
+            "Violence & Physical Harm": {
+              "precision": 0.3,
+              "recall": 0.25,
+              "f1": 0.2727272727272727,
+              "support": 12
+            },
+            "Systemic Risks": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Sexual & Exploitative Content": {
+              "precision": 0.3333333333333333,
+              "recall": 0.08333333333333333,
+              "f1": 0.13333333333333333,
+              "support": 12
+            },
+            "Unsafe or High-Risk Advice": {
+              "precision": 0.20588235294117646,
+              "recall": 0.5833333333333334,
+              "f1": 0.30434782608695654,
+              "support": 12
+            },
+            "Privacy & Data Misuse": {
+              "precision": 0.5454545454545454,
+              "recall": 0.5,
+              "f1": 0.5217391304347826,
+              "support": 12
+            },
+            "Hate, Harassment & Discrimination": {
+              "precision": 0.3125,
+              "recall": 0.8333333333333334,
+              "f1": 0.45454545454545453,
+              "support": 12
+            },
+            "Ethical & Moral Risk": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12
+            },
+            "Intellectual Property & Content Integrity": {
+              "precision": 0.8,
+              "recall": 0.3333333333333333,
+              "f1": 0.47058823529411764,
+              "support": 12
+            }
+          },
+          "confusion": {
+            "labels": [
+              "Criminal Activity & Exploitation",
+              "Political & Societal Manipulation",
+              "Violence & Physical Harm",
+              "Systemic Risks",
+              "Sexual & Exploitative Content",
+              "Unsafe or High-Risk Advice",
+              "Privacy & Data Misuse",
+              "Hate, Harassment & Discrimination",
+              "Ethical & Moral Risk",
+              "Intellectual Property & Content Integrity"
+            ],
+            "matrix": [
+              [
+                5,
+                1,
+                0,
+                0,
+                1,
+                2,
+                1,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                7,
+                0,
+                0,
+                0,
+                1,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                3,
+                0,
+                1,
+                4,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                0,
+                0,
+                2,
+                3,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1,
+                6,
+                0,
+                4,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                2,
+                0,
+                0,
+                7,
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                2,
+                0,
+                0,
+                1,
+                6,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                10,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                5,
+                0,
+                6,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                1,
+                0,
+                0,
+                5,
+                0,
+                0,
+                0,
+                4
+              ]
+            ]
+          }
+        }
+      },
+      "avg_weighted_f1": 0.27153275170140556,
+      "n_languages": 10
+    }
+  },
+  "n_params": 3085938688,
+  "total_seconds": 510.1
+}

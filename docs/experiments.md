@@ -15,3 +15,6 @@ Fixed seeds recorded; three seeds for shortlisted configs where compute allows; 
 
 ## Run records
 (none yet)
+
+## Run records
+- E1 (2026-11-25, Kaggle T4): Qwen3-4B and Qwen2.5-3B-Instruct, 0/3-shot, generate/choice, full dev. See results/tables/e1_baselines.csv and decision 0006. Gemma 3 4B pending a loading/dtype check.

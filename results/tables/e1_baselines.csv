@@ -1,0 +1,9 @@
+model,mode,shots,input,split,params_B,minutes,run_id,A_wf1,A_unparsed,B_wf1,B_unparsed
+Qwen/Qwen2.5-3B-Instruct,choice,0,both,dev,3.09,6.5,Qwen-Qwen2-5-3B-Instruct_choice_0shot_both_dev_20261125-060238,0.6746,0.0,0.2544,0.0
+Qwen/Qwen2.5-3B-Instruct,generate,0,both,dev,3.09,8.5,Qwen-Qwen2-5-3B-Instruct_generate_0shot_both_dev_20261125-055353,0.703,0.0,0.2715,0.0017
+Qwen/Qwen2.5-3B-Instruct,choice,3,both,dev,3.09,24.5,Qwen-Qwen2-5-3B-Instruct_choice_3shot_both_dev_20261125-063553,0.6591,0.0,0.3256,0.0
+Qwen/Qwen2.5-3B-Instruct,generate,3,both,dev,3.09,26.2,Qwen-Qwen2-5-3B-Instruct_generate_3shot_both_dev_20261125-060923,0.6122,0.0,0.3269,0.0008
+Qwen/Qwen3-4B,choice,0,both,dev,4.02,10.7,Qwen-Qwen3-4B_choice_0shot_both_dev_20261125-060738,0.6813,0.0,0.2652,0.0
+Qwen/Qwen3-4B,generate,0,both,dev,4.02,12.6,Qwen-Qwen3-4B_generate_0shot_both_dev_20261125-055353,0.5853,0.0,0.2777,0.0
+Qwen/Qwen3-4B,choice,3,both,dev,4.02,43.9,Qwen-Qwen3-4B_choice_3shot_both_dev_20261125-070328,0.6833,0.0,0.3307,0.0
+Qwen/Qwen3-4B,generate,3,both,dev,4.02,44.6,Qwen-Qwen3-4B_generate_3shot_both_dev_20261125-061837,0.6799,0.0,0.2992,0.0
