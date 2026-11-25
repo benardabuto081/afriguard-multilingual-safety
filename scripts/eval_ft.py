@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate a fine-tuned unified model (base + LoRA adapter): metrics + official-format submission zip."""
+"""Evaluate a fine-tuned model (base + LoRA adapter): metrics + official-format submission zip."""
 from __future__ import annotations
 
 import argparse
@@ -19,6 +19,8 @@ from afriguard.ftformat import build_user_text, parse_answer, render_prompt
 from afriguard.labels import LANGUAGES, TASK_A_LABELS, TASK_B_LABELS, UNPARSED
 
 FALLBACK = {"A": "unsafe", "B": "Criminal Activity & Exploitation"}
+LABELS = {"A": TASK_A_LABELS, "B": TASK_B_LABELS}
+DIRS = {"A": "task_a_safety", "B": "task_b_category"}
 
 
 def generate(model, tok, texts, bs, max_new):
@@ -49,6 +51,7 @@ def main():
     ap.add_argument("--model", required=True)
     ap.add_argument("--adapter", default=None)
     ap.add_argument("--revision", default=None)
+    ap.add_argument("--task-mode", default="joint", choices=["joint", "A", "B"])
     ap.add_argument("--split", default="dev", choices=["dev", "test"])
     ap.add_argument("--languages", nargs="+", default=LANGUAGES)
     ap.add_argument("--limit", type=int, default=None)
@@ -62,10 +65,12 @@ def main():
     ap.add_argument("--out-dir", default=None)
     a = ap.parse_args()
 
+    tasks = ("A", "B") if a.task_mode == "joint" else (a.task_mode,)
     cdt = torch.float16 if a.dtype == "float16" else torch.bfloat16
     out = Path(a.out_dir) if a.out_dir else (Path(a.adapter).parent if a.adapter else Path("experiments/ft")) / f"eval_{a.split}"
     (out / "predictions").mkdir(parents=True, exist_ok=True)
-    tok = AutoTokenizer.from_pretrained(a.adapter if a.adapter else a.model, revision=None if a.adapter else a.revision)
+    has_tok = a.adapter and (Path(a.adapter) / "tokenizer_config.json").exists()
+    tok = AutoTokenizer.from_pretrained(a.adapter if has_tok else a.model)
     tok.padding_side = "left"
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
@@ -77,46 +82,47 @@ def main():
         model = PeftModel.from_pretrained(model, a.adapter)
     model.eval()
 
-    t_all, metrics, sub = time.time(), {"config": vars(a), "tasks": {"A": {}, "B": {}}}, {}
+    t_all, metrics, sub = time.time(), {"config": vars(a), "tasks": {t: {} for t in tasks}}, {}
     for lang in a.languages:
         t0 = time.time()
         A = load_split(a.data_dir, "A", lang, a.split)
         B = load_split(a.data_dir, "B", lang, a.split)
+        B = B.set_index("id").loc[A["id"]].reset_index()  # align Task B rows to Task A order by id
         if a.limit:
             A, B = A.head(a.limit), B.head(a.limit)
-        texts = [render_prompt(tok, a.model, build_user_text(r.prompt, r.response, not a.prompt_only, a.max_chars))
-                 for r in A.itertuples()]
+        texts = [render_prompt(tok, a.model, build_user_text(r.prompt, r.response, not a.prompt_only,
+                                                             a.max_chars, a.task_mode)) for r in A.itertuples()]
         raw = generate(model, tok, texts, a.batch_size, a.max_new_tokens)
         parsed = [parse_answer(x) for x in raw]
-        pa = [p[0] or UNPARSED for p in parsed]
-        pb = [p[1] or UNPARSED for p in parsed]
-        pd.DataFrame({"id": A["id"], "label_a": pa, "label_b": pb, "raw": raw}).to_csv(
+        preds = {"A": [p[0] or UNPARSED for p in parsed], "B": [p[1] or UNPARSED for p in parsed]}
+        pd.DataFrame({"id": A["id"], "label_a": preds["A"], "label_b": preds["B"], "raw": raw}).to_csv(
             out / "predictions" / f"{lang}.csv", index=False)
-        sub[lang] = (A["id"].tolist(), [x if x != UNPARSED else FALLBACK["A"] for x in pa],
-                     [x if x != UNPARSED else FALLBACK["B"] for x in pb])
+        sub[lang] = (A["id"].tolist(), {t: [x if x != UNPARSED else FALLBACK[t] for x in preds[t]] for t in tasks})
         sec = round(time.time() - t0, 1)
-        line = f"{lang:8s} n={len(A)} {sec}s unparsed A={pa.count(UNPARSED)/len(pa):.1%} B={pb.count(UNPARSED)/len(pb):.1%}"
+        line = f"{lang:8s} n={len(A)} {sec}s " + " ".join(
+            f"unparsed {t}={preds[t].count(UNPARSED)/len(A):.1%}" for t in tasks)
         if "label" in A.columns:
-            for t, preds, gold, labels in (("A", pa, A["label"], TASK_A_LABELS), ("B", pb, B["label"], TASK_B_LABELS)):
-                m = full_metrics(gold, preds, labels)
-                m.update(n=len(A), seconds=sec, unparsed_rate=preds.count(UNPARSED) / len(preds))
+            gold = {"A": A["label"], "B": B["label"]}
+            for t in tasks:
+                m = full_metrics(gold[t], preds[t], LABELS[t])
+                m.update(n=len(A), seconds=sec, unparsed_rate=preds[t].count(UNPARSED) / len(A))
                 metrics["tasks"][t][lang] = m
-            line += f" wF1 A={metrics['tasks']['A'][lang]['weighted_f1']:.3f} B={metrics['tasks']['B'][lang]['weighted_f1']:.3f}"
+                line += f" wF1 {t}={m['weighted_f1']:.3f}"
         print(line, flush=True)
-    for t in ("A", "B"):
-        s = [v["weighted_f1"] for v in metrics["tasks"][t].values()]
+    for t in tasks:
+        s = [v["weighted_f1"] for k, v in metrics["tasks"][t].items() if not k.startswith("_")]
         metrics["tasks"][t]["_avg_weighted_f1"] = sum(s) / len(s) if s else None
-    print("AVG weighted F1: A=%s B=%s" % (metrics["tasks"]["A"].get("_avg_weighted_f1"), metrics["tasks"]["B"].get("_avg_weighted_f1")))
+    print("AVG weighted F1:", {t: metrics["tasks"][t]["_avg_weighted_f1"] for t in tasks})
     metrics["total_seconds"] = round(time.time() - t_all, 1)
     (out / "metrics.json").write_text(json.dumps(metrics, indent=2))
     with zipfile.ZipFile(out / "submission.zip", "w", zipfile.ZIP_DEFLATED) as z:
-        for lang, (ids, la, lb) in sub.items():
-            for d, labs in (("task_a_safety", la), ("task_b_category", lb)):
+        for lang, (ids, labs) in sub.items():
+            for t in tasks:
                 buf = io.StringIO()
                 buf.write("id,label\n")
-                for i, lab in zip(ids, labs):
+                for i, lab in zip(ids, labs[t]):
                     buf.write(f'{i},"{lab}"\n')
-                z.writestr(f"{d}/{lang}.csv", buf.getvalue())
+                z.writestr(f"{DIRS[t]}/{lang}.csv", buf.getvalue())
     print("Wrote", out)
 
 

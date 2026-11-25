@@ -26,3 +26,4 @@ results/predictions/
 data/starting_kit/
 experiments/**/predictions/
 data/*.zip
+experiments/**/adapter*/

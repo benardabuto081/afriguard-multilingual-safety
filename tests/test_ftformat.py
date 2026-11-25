@@ -21,3 +21,10 @@ def test_sampling():
     assert abs(sum(language_weights(c, 0.5).values()) - 1) < 1e-9
     assert language_weights(c, 0.0) == {"a": 0.5, "b": 0.5}
     assert abs(language_weights(c, 1.0)["b"] - 0.8) < 1e-9
+
+
+def test_modes():
+    assert format_answer("safe", "Systemic Risks", "A") == "safety: safe"
+    assert format_answer("safe", "Systemic Risks", "B") == "category: Systemic Risks"
+    assert "category" not in build_user_text("p", "r", True, 100, "A").split("Answer in the format:")[1]
+    assert parse_answer(format_answer("safe", "Systemic Risks", "B")) == (None, "Systemic Risks")
