@@ -80,6 +80,7 @@ def main():
     ap.add_argument("--epochs", type=int, default=1)
     ap.add_argument("--max-steps", type=int, default=-1)
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--per-language", type=int, default=None)
     ap.add_argument("--lr", type=float, default=2e-4)
     ap.add_argument("--bs", type=int, default=2)
     ap.add_argument("--grad-accum", type=int, default=8)
@@ -101,6 +102,8 @@ def main():
     started = datetime.now(timezone.utc).isoformat()
 
     df = pd.concat([load_joint(a.data_dir, a.languages, s) for s in a.splits], ignore_index=True)
+    if a.per_language:
+        df = df.groupby("lang").sample(n=a.per_language, random_state=a.seed).reset_index(drop=True)
     if a.limit:
         df = df.sample(n=min(a.limit, len(df)), random_state=a.seed).reset_index(drop=True)
     tok = AutoTokenizer.from_pretrained(a.model, revision=a.revision)

@@ -27,4 +27,4 @@ pythonpath = ["src"]
 line-length = 100
 
 [tool.ruff.lint]
-ignore = ["C408", "TRY004", "PLW1510"]
+ignore = ["C408", "TRY004", "PLW1510", "UP031", "SIM115"]

@@ -37,7 +37,7 @@ def parse_answer(text):
 
 def end_token(tok) -> str:
     vocab = tok.get_vocab()
-    for t in ("<|im_end|>", "<end_of_turn>"):
+    for t in ("<|im_end|>", "<end_of_turn>", "<|END_OF_TURN_TOKEN|>"):
         if t in vocab:
             return t
     return tok.eos_token
