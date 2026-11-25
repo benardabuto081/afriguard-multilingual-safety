@@ -27,3 +27,4 @@ data/starting_kit/
 experiments/**/predictions/
 data/*.zip
 experiments/**/adapter*/
+experiments/**/state.pt

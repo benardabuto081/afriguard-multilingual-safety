@@ -20,3 +20,4 @@ Fixed seeds recorded; three seeds for shortlisted configs where compute allows; 
 - E1 (2026-11-25, Kaggle T4): Qwen3-4B and Qwen2.5-3B-Instruct, 0/3-shot, generate/choice, full dev. See results/tables/e1_baselines.csv and decision 0006. Gemma 3 4B pending a loading/dtype check.
 - Backbone pilot (2026-11-25, Kaggle T4, 150/lang x 1 epoch): see decision 0008 and results/tables/ft_runs.csv.
 - Planned: E2 full (Tiny Aya Earth, 2 epochs, joint); pilot-scale ablations: joint vs Task A-only vs Task B-only vs prompt-only (RQ4 and input ablation).
+- E2 (2026-11-25/26, Kaggle T4): Tiny Aya Earth, joint, 8,607 ex, 2 epochs: dev A 0.9291, B 0.6252. Pilot ablations and compact-template pilot: results/tables/ft_runs.csv, decision 0010.

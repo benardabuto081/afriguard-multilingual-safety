@@ -1,0 +1,9 @@
+# 0010 - E2 results, pilot-scale ablations, compact template, gap to leaderboard
+
+- Date: 2026-11-26
+- E2 (Tiny Aya Earth, unified output, train only, 8,607 examples, 2 epochs, default template, seed 42), full dev: Task A 0.9291, Task B 0.6252, 0% unparsed. Training 495.9 min on one T4 (about 410 tokens/s), peak 11.8 GB. (Resumed once from update 750; resume path verified.)
+- Dev leaderboard (2026-11-26) leader: A 0.9391, B 0.6837. Gap: A -0.010 (about 12 items of 1,200; within noise), B -0.058. Oromo (-0.153), Twi (-0.126) and Zulu (-0.101) account for about two thirds of the B gap; E2 is ahead in Wolof (+0.054). In Oromo and Twi E2 is below the TF-IDF diagnostic (0.516 vs 0.563; 0.580 vs 0.644). Oromo and Twi are not on the Tiny Aya language list I could read (hypothesis: coverage).
+- Pilot-scale ablations (1,500 examples, 1 epoch, seed 42, one run each; noise about +/-0.015 on a 10-language mean): joint vs A-only 0.8993 vs 0.9011 (A); joint vs B-only 0.4971 vs 0.5156 (B): no evidence that joint supervision helps, though it halves cost. Without the response: A 0.8664, B 0.4687 (response helps both, about +0.03). Seed-variance runs pending.
+- Compact template (Cohere special tokens, no 400-token preamble): tokens per example 736 -> 338, training 38.5 -> 20.1 min, peak 11.7 -> 9.9 GB, accuracy unchanged (A 0.9022, B 0.5018). Adopted for all further runs. Risk: an organizer harness may use the default template; cross-template evaluation pending.
+- Scaling: Task B 0.497 (1,500 ex, 1 epoch) -> 0.625 (8,607 ex, 2 epochs): data-hungry (confounded by epochs). The epoch-1 checkpoint of E2 was not retained (excluded from a backup), so 1 vs 2 epochs is untested; E2c (compact, full scale) saves and evaluates it.
+- Next: E2c; seed runs; Tiny Aya Global pilot; label-logit scoring for calibration (E5); error analysis to define hard cases (E4).
