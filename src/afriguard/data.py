@@ -28,3 +28,15 @@ def load_split(data_dir: str | Path, task: str, language: str, split: str) -> pd
     if not path.is_file():
         raise FileNotFoundError(f"Split file not found: {path}")
     return pd.read_csv(path, dtype=str, keep_default_na=False)
+
+
+def load_joint(data_dir, langs, split):
+    """Task A and Task B labels joined on id, one row per item (columns: label_a, label_b, lang)."""
+    frames = []
+    for lang in langs:
+        a = load_split(data_dir, "A", lang, split)
+        b = load_split(data_dir, "B", lang, split)
+        m = a.merge(b[["id", "label"]], on="id", suffixes=("_a", "_b"), validate="one_to_one")
+        m["lang"] = lang
+        frames.append(m)
+    return pd.concat(frames, ignore_index=True)
