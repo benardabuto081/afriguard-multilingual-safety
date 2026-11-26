@@ -1,0 +1,2 @@
+{"step": 1, "of": 1076, "loss": 2.4867, "lr": 6.25e-06, "tok_per_s": 423, "elapsed_min": 0.2, "eta_min": 208.9}
+{"step": 10, "of": 1076, "loss": 1.8074, "lr": 6.25e-05, "tok_per_s": 440, "elapsed_min": 2.1, "eta_min": 221.9}
