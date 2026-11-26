@@ -54,10 +54,10 @@ def test_train_item_masks_prefix():
 
 
 def test_clipping_keeps_answer():
-    ids, lab = build_train_item(FakeTok(), "other", ALL["t3"], "A", "x" * 5000, "unsafe", "native", 700, "<E>")
-    assert len(ids) <= 700 and "".join(chr(i) for i in ids[-8:]).endswith("unsafe<E>")
+    ids, _lab = build_train_item(FakeTok(), "other", ALL["t3"], "A", "x" * 5000, "unsafe", "native", 700, "<E>")
+    assert len(ids) <= 700 and "".join(chr(i) for i in ids[-9:]).endswith("unsafe<E>")
 
 
 def test_encode_pair_boundary():
-    pre, ans = encode_pair(FakeTok(), render_prefix(FakeTok(), "other", ALL["t3"], "A", "p"), " safe")
+    _pre, ans = encode_pair(FakeTok(), render_prefix(FakeTok(), "other", ALL["t3"], "A", "p"), " safe")
     assert "".join(map(chr, ans)) == " safe"
