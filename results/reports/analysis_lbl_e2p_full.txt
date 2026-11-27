@@ -1,0 +1,86 @@
+run: experiments/multitask/e2p_full/eval_lbl   held-out templates: ['h1', 'h2', 'h3', 'h4']   all templates: ['t1', 't3', 'h1', 'h2', 'h3', 'h4']
+
+== Per-language weighted F1 (mean over held-out templates) vs prompt-only TF-IDF ==
+             A  A_tfidf      B  B_tfidf  A_gain  B_gain
+amharic  0.898    0.766  0.583    0.353   0.132   0.230
+hausa    0.944    0.867  0.693    0.597   0.077   0.096
+igbo     0.890    0.891  0.634    0.516  -0.002   0.118
+oromo    0.816    0.833  0.390    0.455  -0.017  -0.065
+shona    0.849    0.807  0.556    0.394   0.042   0.162
+swahili  0.933    0.815  0.589    0.381   0.118   0.208
+twi      0.823    0.858  0.490    0.538  -0.036  -0.048
+wolof    0.877    0.815  0.596    0.499   0.062   0.097
+yoruba   0.869    0.850  0.612    0.516   0.019   0.096
+zulu     0.921    0.841  0.597    0.335   0.079   0.262
+MEAN     0.882    0.834  0.574    0.458   0.047   0.116
+
+== Task A error rate by gold category (probabilities averaged over held-out templates) ==
+      safe_called_unsafe  unsafe_called_safe
+Crim               0.098               0.072
+Poli               0.100               0.016
+Viol               0.113               0.050
+Syst               0.049               0.070
+Sexu               0.033               0.083
+Advi               0.233               0.150
+Priv               0.121               0.082
+Hate               0.263               0.172
+Ethi               0.091               0.273
+IP                 0.186               0.100
+
+== Task A: errors and confident errors per language (label-noise candidates; 120 items each) ==
+         errors  confident_errors_p>=0.9
+lang                                    
+amharic      10                        4
+hausa         6                        5
+igbo         12                        3
+oromo        23                        8
+shona        18                        5
+swahili       7                        1
+twi          21                        1
+wolof        16                        7
+yoruba       15                        5
+zulu         10                        2
+TOTAL       138                       41
+
+== Task B pooled per-category ==
+      precision  recall     f1  support
+Crim      0.481   0.585  0.528      130
+Poli      0.541   0.711  0.614      121
+Viol      0.526   0.500  0.513      122
+Syst      0.427   0.347  0.383      118
+Sexu      0.812   0.650  0.722      120
+Advi      0.545   0.550  0.548      120
+Priv      0.750   0.756  0.753      119
+Hate      0.794   0.636  0.706      121
+Ethi      0.287   0.355  0.317      110
+IP        0.891   0.756  0.818      119
+
+== Task B confusion (rows gold, columns predicted) ==
+      Crim  Poli  Viol  Syst  Sexu  Advi  Priv  Hate  Ethi  IP
+Crim    76     5    11    10     0     9     5     2    10   2
+Poli     3    86     6     7     1     3     4     5     4   2
+Viol     8     9    61     7     3    11     2     3    16   2
+Syst    19    10    16    41     1    17     3     2     9   0
+Sexu     5     2     7     5    78     3     1     0    19   0
+Advi    15     2     7     9     2    66     6     2    10   1
+Priv     6     9     0     4     0     3    90     0     4   3
+Hate     1    13     4     1     4     1     0    77    19   1
+Ethi    19    15     4     8     6     6     7     6    39   0
+IP       6     8     0     4     1     2     2     0     6  90
+top confusions: 19 Syst->Crim; 19 Sexu->Ethi; 19 Hate->Ethi; 19 Ethi->Crim; 17 Syst->Advi; 16 Viol->Ethi; 16 Syst->Viol; 15 Ethi->Poli
+
+== Calibration upper bound (class-bias, 5-fold CV on dev; the organizers' harness would not apply it) ==
+task template  argmax  bias_corrected   gain
+   A       t1  0.8865          0.8907 0.0042
+   A       t3  0.8865          0.8922 0.0057
+   A       h1  0.8890          0.8916 0.0025
+   A       h2  0.8814          0.8865 0.0051
+   A       h3  0.8858          0.8899 0.0042
+   A       h4  0.8714          0.8847 0.0132
+   B       t1  0.5864          0.5897 0.0033
+   B       t3  0.5777          0.5882 0.0105
+   B       h1  0.5862          0.5934 0.0073
+   B       h2  0.5692          0.5894 0.0201
+   B       h3  0.5669          0.5774 0.0106
+   B       h4  0.5731          0.5899 0.0168
+mean gain: {'A': 0.0058, 'B': 0.0114}

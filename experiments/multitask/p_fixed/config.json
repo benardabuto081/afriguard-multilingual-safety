@@ -1,0 +1,52 @@
+{
+  "model": "CohereLabs/tiny-aya-earth",
+  "bank": "fixed",
+  "tasks": [
+    "A",
+    "B"
+  ],
+  "splits": [
+    "train"
+  ],
+  "languages": [
+    "amharic",
+    "hausa",
+    "igbo",
+    "oromo",
+    "shona",
+    "swahili",
+    "twi",
+    "wolof",
+    "yoruba",
+    "zulu"
+  ],
+  "per_language": 150,
+  "epochs": 1,
+  "max_steps": -1,
+  "lr": 0.0002,
+  "bs": 4,
+  "grad_accum": 4,
+  "max_len": 640,
+  "compact_p": 0.8,
+  "lora_r": 16,
+  "dtype": "float16",
+  "seed": 42,
+  "log_every": 10,
+  "save_every": 100,
+  "resume": false,
+  "data_dir": "data/raw",
+  "out_dir": "experiments/multitask/p_fixed",
+  "started": "2026-11-26T12:56:57.768863+00:00",
+  "n_sequences": 3000,
+  "total_updates": 187,
+  "tokens_mean": 191.91633333333334,
+  "tokens_max": 640,
+  "torch": "2.11.0+cu130",
+  "gpu": "Tesla T4",
+  "resumed_from_update": 0,
+  "finished": "2026-11-26T13:17:42.594523+00:00",
+  "updates_done": 187,
+  "train_minutes": 20.5,
+  "peak_gpu_gb": 12.96,
+  "nonfinite_skipped": 0
+}
