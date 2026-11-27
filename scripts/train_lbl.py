@@ -29,17 +29,19 @@ from transformers import (
 from afriguard.data import load_joint
 from afriguard.ftformat import end_token
 from afriguard.labels import LANGUAGES
+from afriguard.sampling import build_rules, repeat_count
 from afriguard.templates import BANKS, answers, build_train_item, family_of, render_prefix
 from afriguard.utils import set_seed
 
 TARGETS = r"(?!.*(vision|multi_modal)).*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)"
 
 
-def build_items(df, bank, tasks, seed, compact_p, tok, family, max_len, end_chat, end_raw):
+def build_items(df, bank, tasks, seed, compact_p, tok, family, max_len, end_chat, end_raw, rules=None):
     rng = random.Random(seed)
     items = []
     for r in df.itertuples():
-        for task in tasks:
+        reps = 1 if not rules else repeat_count(rules, r, rng)
+        for task in list(tasks) * reps:
             tpl = bank[rng.randrange(len(bank))]
             u = rng.random()
             render = "compact" if (family == "aya" and u < compact_p) else "native"
@@ -92,6 +94,8 @@ def main():
     ap.add_argument("--grad-accum", type=int, default=4)
     ap.add_argument("--max-len", type=int, default=640)
     ap.add_argument("--compact-p", type=float, default=0.8)
+    ap.add_argument("--upsample-cells", default="", help="e.g. 8:safe=2,9:unsafe=2 (category number 1-10 : Task A label = factor)")
+    ap.add_argument("--upsample-langs", default="", help="e.g. oromo=2,twi=2")
     ap.add_argument("--lora-r", type=int, default=16)
     ap.add_argument("--dtype", default="float16", choices=["float16", "bfloat16"])
     ap.add_argument("--seed", type=int, default=42)
@@ -108,6 +112,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     cdt = torch.float16 if a.dtype == "float16" else torch.bfloat16
     family, bank = family_of(a.model), BANKS[a.bank]
+    rules = build_rules(a.upsample_cells, a.upsample_langs)
     started = datetime.now(timezone.utc).isoformat()
 
     import pandas as pd
@@ -127,7 +132,7 @@ def main():
 
     enc, batches, offset, epoch_batches = [], [], 0, None
     for e in range(a.epochs):
-        items = build_items(df, bank, a.tasks, a.seed + e, a.compact_p, tok, family, a.max_len, end_chat, end_raw)
+        items = build_items(df, bank, a.tasks, a.seed + e, a.compact_p, tok, family, a.max_len, end_chat, end_raw, rules)
         lens = [len(x[0]) for x in items]
         batches += [[offset + j for j in b] for b in make_batches(lens, a.bs, rng)]
         enc += items
