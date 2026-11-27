@@ -9,3 +9,8 @@
 - Calibration: oracle 5-fold class-bias gain +0.006 (A), +0.011 (B); not deployable under the organizers' harness. Reported as analysis only.
 - Confident errors (p>=0.9): 41 of 1,200 Task A dev items, spread across languages; not concentrated where the forum reports mislabelled train items. No relabeling.
 - Plan: (1) CPU merge, numeric spot check and private HF push of the e2p adapter; (2) AfriqueQwen smoke test and pilot (t1, h2, h4 only) against the matched Tiny Aya pilot; (3) choose backbone by mean and per-language results; (4) optional language/cell upsampling flags (E3/E4) at full scale; (5) final refit on train+dev with frozen configuration; (6) verified-harness-style check of the merged checkpoint.
+
+## Addendum (2026-11-27, after the CPU session)
+- Merge of e2p_full (CPU, fp32 merge, fp16 save): 3.349B parameters, single 6.7 GB safetensors; pushed to private repo Abuto/afriguard-tinyaya-e2p. Spot check on 6 Swahili dev items x 2 tasks: argmax agreement 12/12, median |log-prob diff| 0.15-0.18, max 1.08 (adapter run used a 4-bit base). Full dev evaluation of the merged model on GPU is still pending.
+- Tokenisation: "safe" is 1 token and "unsafe" 2 tokens under t1, h1, h2 and h4 (Tiny Aya tokenizer). With per-token mean scoring and a near-certain second token, "unsafe" wins whenever P(safe) < 0.62, which explains the collapse on h4 (0.4238 vs 0.8714 summed) where the model is least confident, and not on confident chat templates.
+- Stress templates s1 (letter answers), s2 (Yes/No), s3 (no BOS) added for evaluation only (never trained).
