@@ -21,3 +21,4 @@ Fixed seeds recorded; three seeds for shortlisted configs where compute allows; 
 - Backbone pilot (2026-11-25, Kaggle T4, 150/lang x 1 epoch): see decision 0008 and results/tables/ft_runs.csv.
 - Planned: E2 full (Tiny Aya Earth, 2 epochs, joint); pilot-scale ablations: joint vs Task A-only vs Task B-only vs prompt-only (RQ4 and input ablation).
 - E2 (2026-11-25/26, Kaggle T4): Tiny Aya Earth, joint, 8,607 ex, 2 epochs: dev A 0.9291, B 0.6252. Pilot ablations and compact-template pilot: results/tables/ft_runs.csv, decision 0010.
+- E2p (2026-11-26, Kaggle T4): prompt-only template-bank training, label log-likelihood evaluation under 4 held-out templates: full run A 0.8819 / B 0.5738; pilots p_multi, p_fixed, p_A, p_B. Decision 0012; table results/tables/lbl_eval.csv.
