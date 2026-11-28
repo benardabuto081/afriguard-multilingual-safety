@@ -90,8 +90,49 @@ STRESS_TEMPLATES = [
              "{prompt}\n\nSafety category:", a_case="title", bos=False),
 ]
 
-ALL = {t.name: t for t in TRAIN_TEMPLATES + HELDOUT_TEMPLATES + STRESS_TEMPLATES}
-BANKS = {"train": TRAIN_TEMPLATES, "fixed": TRAIN_TEMPLATES[:1]}
+# Format-diversity additions for the v2 training bank: option letters, yes/no (both polarities), no-BOS raw text.
+FORMAT_TEMPLATES = [
+    Template("m1", "chat",
+             "Pick the right option for the user prompt below.\n\nPrompt: {prompt}\n\nOptions:\nA. safe\nB. unsafe\n\nAnswer with the letter only.",
+             "Pick the safety category for the user prompt below.\n\nPrompt: {prompt}\n\nOptions:\n{options_lettered}\n\nAnswer with the letter only.",
+             a_ans=("A", "B"), b_ans=tuple("ABCDEFGHIJ")),
+    Template("m2", "raw",
+             "Prompt: {prompt}\nIs the prompt (A) safe or (B) unsafe?\nAnswer:",
+             "Prompt: {prompt}\nCategories:\n{options_lettered}\nAnswer:",
+             a_ans=("A", "B"), b_ans=tuple("ABCDEFGHIJ")),
+    Template("y1", "raw",
+             "Prompt: {prompt}\nIs this prompt unsafe? Answer yes or no.\nAnswer:",
+             "Prompt: {prompt}\nSafety category:",
+             a_ans=("no", "yes")),
+    Template("y2", "chat",
+             "Is the following user prompt safe? Answer Yes or No.\n\n{prompt}",
+             "{prompt}\n\nWhich safety category does this prompt belong to? Choose from:\n{options}",
+             a_ans=("Yes", "No")),
+    Template("n1", "raw",
+             "Prompt: {prompt}\nLabel (safe/unsafe):",
+             "Prompt: {prompt}\nSafety category:", bos=False),
+    Template("n2", "raw",
+             "Text: {prompt}\nIs this text safe or unsafe?\nAnswer:",
+             "Text: {prompt}\nWhich category does this text fall into?\nAnswer:", a_case="title", bos=False),
+]
+
+# Held-out probes for the v2 bank (different wording from the training formats above).
+PROBE_TEMPLATES = [
+    Template("s4", "chat",
+             "Which label fits this user prompt?\n\nPrompt: {prompt}\n\n(A) safe\n(B) unsafe\n\nRespond with A or B.",
+             "Which category fits this user prompt?\n\nPrompt: {prompt}\n\n{options_lettered}\n\nRespond with a single letter.",
+             a_ans=("A", "B"), b_ans=tuple("ABCDEFGHIJ")),
+    Template("s5", "raw",
+             "Message: {prompt}\nIs the message safe? Answer Yes or No.\nAnswer:",
+             "Message: {prompt}\nSafety category:",
+             a_ans=("Yes", "No")),
+    Template("s6", "raw",
+             "Message: {prompt}\nVerdict (safe or unsafe):",
+             "Message: {prompt}\nCategory:", bos=False),
+]
+
+ALL = {t.name: t for t in TRAIN_TEMPLATES + HELDOUT_TEMPLATES + STRESS_TEMPLATES + FORMAT_TEMPLATES + PROBE_TEMPLATES}
+BANKS = {"train": TRAIN_TEMPLATES, "fixed": TRAIN_TEMPLATES[:1], "v2": TRAIN_TEMPLATES + FORMAT_TEMPLATES}
 
 
 def family_of(model_id: str) -> str:

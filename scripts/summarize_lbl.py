@@ -27,5 +27,8 @@ for task in ("A", "B"):
     held = [c for c in pv.columns if c.startswith("h")]
     if held:
         pv["held_mean"], pv["held_min"] = pv[held].mean(axis=1), pv[held].min(axis=1)
+    probes = [c for c in pv.columns if c.startswith("s")]
+    if probes:
+        pv["probe_mean"] = pv[probes].mean(axis=1)
     print(f"\n=== Task {task}: 10-language weighted F1 by template (sum of label log-probs) ===")
     print(pv.round(4).to_string())
